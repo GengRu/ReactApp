@@ -1,19 +1,16 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/hell_Express/node_modules
-/hell_Express/.pnp
-/hell_Express/.pnp.js
-/hell_React/node_modules
-/hell_React/.pnp
-/hell_React/.pnp.js
+/node_modules
+/.pnp
+.pnp.js
 
 # testing
 /coverage
 
 # production
-/hell_Express/build
-/hell_React/build
+/build
+
 # misc
 .DS_Store
 .env.local
