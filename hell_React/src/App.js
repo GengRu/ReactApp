@@ -27,7 +27,7 @@ class App extends React.Component {
 	    <nav className="nav">
 	      <ul>
 			<li>
-			  <Link to="/login">Login</Link>
+			  <Link to="/">Login</Link>
 			</li>
 			
 			<li>
@@ -72,7 +72,7 @@ class App extends React.Component {
 	    {/* A <Switch> looks through its children <Route>s and
 	        renders the first one that matches the current URL. */}
 	    <Switch>
-			<Route path="/login">
+			<Route exact path="/">
 			  <Login />
 			</Route>
 			

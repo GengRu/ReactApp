@@ -57,9 +57,22 @@ class Login_Cont extends React.Component{
 	}
 	
 	loginIn(){
-		axios.get('/api/loginIn').then(data=>{
-			console.log(data)
-		})
+		var User = document.getElementById('ipt1').value
+		var Password = document.getElementById('ipt2').value
+		
+		if(User != '' && Password != ''){
+			axios.post('/api/loginIn',{
+					user: User,
+					password: Password
+			}).then(data=>{
+				alert(data.data)
+				if(data.data == '登录成功'){
+					window.location.href="http://localhost:3000/home"
+				}
+				
+			})
+		}
+		
 	}
 	
 	render(){
@@ -86,11 +99,11 @@ class Login_Cont extends React.Component{
 				
 				<div className="Zxr_Login_Cont_box" style={{display:this.state.index===0?'block':'none'}}>
 					<div className="Zxr_Login_Cont_box_input">
-						<input type="text" placeholder="账号/手机号/邮箱" style={{border:'none'}}/>
+						<input type="text" placeholder="账号/手机号/邮箱" id="ipt1" style={{border:'none'}}/>
 					</div>
 					
 					<div className="Zxr_Login_Cont_box_input">
-						<input type="password" placeholder="密码" style={{border:'none'}}/>
+						<input type="password" placeholder="密码" id="ipt2" style={{border:'none'}}/>
 					</div>
 					<button className="Zxr_Login_Cont_Btn" onClick={this.loginIn.bind(this)}>登录</button>
 					<div className="Zxr_Login_Cont_Foot">忘记密码</div>
