@@ -3,7 +3,9 @@
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
-	text-align: center;
+}
+body{
+	height: 100%;
 }
 ol,
 ul {
@@ -36,7 +38,23 @@ i {
 
 .nav{
 	position: fixed;
-	top: 0;left: 0;
+	float: left;
 	background-color: #fff;
 	z-index: 9;
+	overflow-x:auto;
+	width:13%;
+}
+nav ul li{
+	font-size: 16px;
+	line-height:76px;
+	background: #001529;
+	padding-left: 10%;
+}
+nav li a , li span{
+	color: #fff;
+}
+nav li img{
+	width: 18px;
+	height:18px;
+	margin-right:8px;
 }
