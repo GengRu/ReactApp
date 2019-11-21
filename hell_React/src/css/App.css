@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+b,
+i {
+  font-style: normal;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.nav{
+	position: fixed;
+	top: 0;left: 0;
+	background-color: #fff;
+	z-index: 9;
+}
