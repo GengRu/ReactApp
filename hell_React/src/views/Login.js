@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Login.css";
 import axios from "axios";
-
+import { useLocation } from "react-router-dom";
 class Login extends React.Component {
   constructor() {
     super();
@@ -66,13 +66,14 @@ class Login_Cont extends React.Component {
     };
     axios.post("/api/loginIn", data).then(data => {
       if (data.data.ok == 0) {
-        alert('登录成功');
+        alert("登录成功");
+        console.log(this);
         console.log(data.data);
-    } else if (data.data.ok == 1) {
-        alert('账号或密码错误');
-    } else if (data.data.ok == 2) {
-        alert('参数缺失');
-    }
+      } else if (data.data.ok == 1) {
+        alert("账号或密码错误");
+      } else if (data.data.ok == 2) {
+        alert("参数缺失");
+      }
     });
   }
   // 绑定表单值

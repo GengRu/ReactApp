@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
-	text-decoration: none;
-	text-align: center;
+  text-decoration: none;
+}
+body {
+  height: 100%;
 }
 ol,
 ul {
@@ -33,10 +35,31 @@ i {
 .clearfix:after {
   clear: both;
 }
+
+.Tb_container {
+  display: flex;
+}
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+  float: left;
   background-color: #fff;
   z-index: 9;
+  overflow-x: auto;
+  width: 200px;
+}
+nav ul li {
+  font-size: 16px;
+  line-height: 76px;
+  background: #001529;
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+}
+nav li a,
+li span {
+  color: #fff;
+}
+nav li img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
 }
