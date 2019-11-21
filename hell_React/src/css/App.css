@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 ol,
 ul {
@@ -29,4 +31,11 @@ i {
 }
 .clearfix:after {
   clear: both;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 9;
 }
