@@ -1,16 +1,17 @@
 import React from 'react';
 
-class Home extends React.Component{
+class Gouhun extends React.Component{
 	constructor(){
 		super();
 	}
 	render(){
 		return (
 		<div>
-			首页
+			勾魂
 		</div>
 		)
 	}
 }
 
-export default Home
+
+export default Gouhun

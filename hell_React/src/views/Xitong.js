@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-class User extends React.Component {
+class Xitong extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -27,4 +27,4 @@ class User extends React.Component {
   }
 }
 
-export default User;
+export default Xitong 

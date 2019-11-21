@@ -2,18 +2,24 @@ var express = require("express");
 var mysql = require("./sql");
 var router = express.Router();
 
-router.get("/users", function(req, res, next) {
-  var nums = [
-    { id: 1, name: "张三" },
-    { id: 2, name: "Mt" },
-    { id: 3, name: "hello" }
-  ];
-  // res.send(nums)
+// 登录
+router.post("/loginIn", function(req, res, next) {
+  var json = req.data;
+  // 判断登陆
   mysql.sql({
-    sql: `select * from one_login`,
-    arr: [],
+    sql: `select * from one_login where id=${json.id} and pass='${json.password}'`,
     data(data) {
-      res.send(data);
+      if (data.length) {
+        res.send({
+          ok: 0,
+          data: data
+        });
+      } else {
+        res.send({
+          ok: 1,
+          data: ""
+        });
+      }
     }
   });
 });
