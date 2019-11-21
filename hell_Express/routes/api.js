@@ -8,6 +8,7 @@ router.get("/users", function(req, res, next) {
     { id: 2, name: "Mt" },
     { id: 3, name: "hello" }
   ];
+  // res.send(nums)
   mysql.sql({
     sql: `select * from one_login`,
     arr: [],

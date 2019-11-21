@@ -9,18 +9,22 @@ class App extends React.Component {
   }
   getusers() {
     axios.get("/api/users").then(res => {
-      console.log(res.data);
+      console.log(...res.data);
+      // console.log(123);
       this.setState({ users: res.data });
     });
   }
-  
+
   render() {
+    var arr = this.state.users.map(item => {
+      return <div key="item.id">{item.user}</div>;
+    });
     return (
       <div className="App">
         <p className="App-intro" onClick={this.getusers.bind(this)}>
-          To get started, edit <code>src/App.js</code> and save to reload.
+          <button>获取用户信息</button>
         </p>
-        
+        <div>{arr}</div>
       </div>
     );
   }
