@@ -17,4 +17,8 @@ router.get("/users", function(req, res, next) {
   });
 });
 
+router.get("/loginIn", function(req, res, next) {
+	res.send('777777');
+});
+
 module.exports = router;

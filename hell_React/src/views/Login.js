@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Login.css";
+import axios from 'axios';
 
 class Login extends React.Component{
 	constructor(){
@@ -40,7 +41,7 @@ class Login_Cont extends React.Component{
 	}
 	
 	E(i){
-		if(this.state.index == i){
+		if(this.state.index === i){
 			this.refs[i].style.borderBottom = '3px solid #0099FF'
 		}else{
 			this.refs[i].style.borderBottom = '3px solid #999'
@@ -48,11 +49,17 @@ class Login_Cont extends React.Component{
 	}
 	
 	O(i){
-		if(this.state.index == i){
+		if(this.state.index === i){
 			this.refs[i].style.borderBottom = '3px solid #0099FF'
 		}else{
 			this.refs[i].style.borderBottom = 'none'
 		}
+	}
+	
+	loginIn(){
+		axios.get('/api/loginIn').then(data=>{
+			console.log(data)
+		})
 	}
 	
 	render(){
@@ -63,7 +70,7 @@ class Login_Cont extends React.Component{
 				  className="Zxr_Login_Cont_title" 
 				  key={$idx} 
 				  onClick={()=>{this.setIndex($idx)}}
-				  style={{color:this.state.index==$idx?'#0099FF':'',borderBottom:this.state.index==$idx?'3px solid #0099FF':''}}
+				  style={{color:this.state.index===$idx?'#0099FF':'',borderBottom:this.state.index===$idx?'3px solid #0099FF':''}}
 				  
 				  onMouseEnter={()=>{this.E($idx)}}
 				  onMouseOut={()=>{this.O($idx)}}
@@ -77,7 +84,7 @@ class Login_Cont extends React.Component{
 			<div className="Zxr_Login_Cont">
 				<div className="Zxr_Login_Cont_Titles">{Cont}</div>
 				
-				<div className="Zxr_Login_Cont_box" style={{display:this.state.index==0?'block':'none'}}>
+				<div className="Zxr_Login_Cont_box" style={{display:this.state.index===0?'block':'none'}}>
 					<div className="Zxr_Login_Cont_box_input">
 						<input type="text" placeholder="账号/手机号/邮箱" style={{border:'none'}}/>
 					</div>
@@ -85,11 +92,11 @@ class Login_Cont extends React.Component{
 					<div className="Zxr_Login_Cont_box_input">
 						<input type="password" placeholder="密码" style={{border:'none'}}/>
 					</div>
-					<div className="Zxr_Login_Cont_Btn">登录</div>
+					<button className="Zxr_Login_Cont_Btn" onClick={this.loginIn.bind(this)}>登录</button>
 					<div className="Zxr_Login_Cont_Foot">忘记密码</div>
 				</div>
 				
-				<div className="Zxr_Login_Cont_box" style={{display:this.state.index==1?'block':'none'}}>
+				<div className="Zxr_Login_Cont_box" style={{display:this.state.index===1?'block':'none'}}>
 					<div className="Zxr_Login_Cont_box_input">
 						<input type="text" placeholder="手机号" style={{border:'none'}}/>
 					</div>
@@ -101,7 +108,7 @@ class Login_Cont extends React.Component{
 					<div className="Zxr_Login_Cont_Btn">登录</div>
 				</div>
 				
-				<div className="Zxr_Login_Cont_box" style={{display:this.state.index==2?'block':'none'}}>
+				<div className="Zxr_Login_Cont_box" style={{display:this.state.index===2?'block':'none'}}>
 					<div className="Zxr_Login_Cont_box_img">
 						<img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/登录页/u40.jpg?token=3669212c88f374a5790bd0d917c0d8d1bd96e854e784e834c1df0db7ec5fd7b3"/>
 					</div>
