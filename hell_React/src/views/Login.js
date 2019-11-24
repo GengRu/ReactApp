@@ -68,11 +68,11 @@ class Login_Cont extends React.Component {
         // alert('登录成功');
         window.location.href = "/home";
         window.localStorage.login = JSON.stringify(data.data);
-    } else if (data.data.ok == 1) {
-        alert('账号或密码错误');
-    } else if (data.data.ok == 2) {
-        alert('参数缺失');
-    }
+      } else if (data.data.ok == 1) {
+        alert("账号或密码错误");
+      } else if (data.data.ok == 2) {
+        alert("参数缺失");
+      }
     });
   }
   // 绑定表单值

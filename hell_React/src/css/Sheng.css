@@ -1,0 +1,278 @@
+.shengsibu {
+	width: 100%;
+}
+
+.Zxr_sheng{
+	background-color: rgba(240, 242, 245, 1);
+	padding: 20px;
+}
+
+
+.Zxr_sheng_box{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	padding: 20px 10px;
+	box-sizing: border-box;
+}
+
+.Zxr_sheng_box_title{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.Zxr_sheng_box_title img{
+	width: 10px;
+	height: 21px;
+	margin-right: 5px;
+}
+
+.Zxr_sheng_box_nav{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.Zxr_sheng_box_nav div{
+	float: left;
+	width: 76px;
+	text-align: center;
+	font-size: 13px;
+	padding: 5px 0;
+	color: #999999;
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_nav div:hover{
+	border-bottom: 3px solid #999999 !important;
+}
+
+.Zxr_sheng_active{
+	color: #0099FF !important;
+	border-bottom: 3px solid #0099FF !important;
+}
+
+.Zxr_sheng_box_inputBox{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.Zxr_sheng_box_inputBox_search{
+	width: 278px;
+	border: 1px solid #ccc;
+	padding: 6px;
+	border-radius: 2px;
+	overflow: hidden;
+	float: left;
+}
+
+.Zxr_sheng_box_inputBox_search span{
+	float: right;
+	width: 15px;
+	height: 15px;
+	padding-top: 4px;
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_inputBox_search span img{
+	width: 100%;
+	height: 100%;
+}
+
+.Zxr_sheng_box_inputBox_select{
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-left: 60px;
+	font-size: 13px;
+}
+
+.Zxr_sheng_box_inputBox_select select{
+	width: 128px;
+	height: 35px;
+	border-color: #ccc;
+}
+
+
+.Zxr_sheng_box_inputBox_btn{
+	float: right;
+	width: 111px;
+	height: 35px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(0, 153, 255, 1);
+	color: #FFFFFF;
+}
+
+.Zxr_sheng_box_inputBox_btn:hover{
+	background-color: rgba(0, 204, 255, 1);
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_Form{
+	border: 1px solid #ccc;
+}
+
+.Zxr_sheng_box_Form_title{
+	width: 100%;
+	height: 53px;
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	background-color: #F2F2F2;
+}
+
+.Zxr_sheng_box_Form_title_all{
+	float: left;
+	height: 53px;
+	line-height: 53px;
+	text-align: center;
+	flex: 1;
+	border-right: 1px solid #ccc;
+}
+
+.Zxr_sheng_box_Form_title div:nth-last-child(1){
+	border-right: none;
+}
+
+.Zxr_sheng_box_Form_title_all:hover{
+	color: #0099FF;
+}
+
+.Zxr_sheng_box_Form_cont{
+	width: 100%;
+	height: 53px;
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	font-size: 13px;
+}
+
+.Zxr_sheng_box_Form_cont_all{
+	float: left;
+	height: 53px;
+	line-height: 53px;
+	text-align: center;
+	flex: 1;
+	border-right: 1px solid #ccc;
+}
+
+.Zxr_sheng_box_Form_cont div:nth-last-child(1){
+	border-right: none;
+}
+
+.Zxr_sheng_box_Form_cont_btn{
+	display: inline-block;
+	color: #0099FF;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_Form_cont_img{
+	width: 24px;
+	height: 24px;
+	background-color: #0099FF;
+	border-radius: 50%;
+	position: relative;
+	bottom: -25px;
+	left: 20px;
+}
+
+.Zxr_sheng_box_Form_cont_img img{
+	width: 16px;
+	height: 10px;
+	position: absolute;
+	top: 9px;left: 5px;
+}
+
+.Zxr_sheng_box_Form_foot{
+	overflow: hidden;
+	height: 50px;
+	font-size: 13px;
+}
+
+.Zxr_sheng_box_Form_foot_left{
+	float: left;
+	position: relative;
+	line-height: 50px;
+}
+
+.Zxr_sheng_box_Form_foot_left_img{
+	width: 24px;
+	height: 24px;
+	background-color: #0099FF;
+	border-radius: 50%;
+	position: absolute;
+	top: 13px;left: 13px;
+}
+
+.Zxr_sheng_box_Form_foot_left_img img{
+	position: absolute;
+	top: 9px;left: 5px;
+}
+
+.Zxr_sheng_box_Form_foot_left span{
+	margin-left: 50px;
+}
+
+.Zxr_sheng_box_Form_foot_right{
+	float: right;
+}
+
+.Zxr_sheng_box_Form_foot_right span{
+	float: left;
+	line-height: 50px;
+	margin-right: 5px;
+}
+
+.Zxr_sheng_box_Form_foot_right_ye{
+	display: inline-block;
+	overflow: hidden;
+	padding: 12.5px 0;
+}
+
+.Zxr_sheng_box_Form_foot_right_ye div{
+	float: left;
+	width: 35px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: #CCC;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	margin: 0 3px;
+	border-radius: 5px;
+}
+
+.Zxr_sheng_box_Form_foot_right_to{
+	display: inline-block;
+	float: right;
+	padding: 12.5px;
+	overflow: hidden;
+}
+
+.Zxr_sheng_box_Form_foot_right_to_input{
+	display: inline-block;
+	width: 35px;
+	height: 25px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+}
+
+.Zxr_sheng_box_Form_foot_right_to_input input{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.Zxr_sheng_box_Form_foot_right_to span{
+	float: none;
+	display: inline-block;
+	line-height: 25px;
+	margin-right: 0;
+	float: left;
+}
+
