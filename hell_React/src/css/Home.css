@@ -1,0 +1,34 @@
+.Tb_home {
+  width: 100%;
+  height: 100vh;
+}
+.Tb_home_cont_bg {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.Tb_home_cont {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.Tb_home_top {
+  display: flex;
+  height: 150px;
+}
+.Tb_home_bottom {
+  width: 100%;
+}
+.Tb_home_bottom_cont {
+  display: flex;
+}
+.Tb_home_bottom_contL, .Tb_home_bottom_contR {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.Tb_home_bottom_contL {
+  margin-right: 10px;
+}
