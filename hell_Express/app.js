@@ -5,8 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var api = require('./routes/api');
+var loginIn = require('./routes/loginIn');
+var home = require('./routes/home');
+var sheng = require('./routes/sheng');
 
 var app = express();
 
@@ -20,9 +21,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// 中间件
+app.use((req, res, next) => {
+  var type = true;
+  if (JSON.stringify(req.body) == "{}") {
+      var json = req.query;
+  } else {
+      var json = req.body; 
+  }
+  for (i in json) {
+      if (json[i] == '') { type = false; }
+  }
+  if (type) { 
+    req.data = json; 
+      next();
+  } else {
+      res.send({ ok: 2, data: '' });
+  }
+});
+
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/api', api);
+app.use('/loginIn', loginIn);
+app.use('/home', home);
+app.use('/sheng', sheng);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
