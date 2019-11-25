@@ -7,7 +7,7 @@ class Shiba extends React.Component {
 	}
 	render() {
 		return ( 
-			<div>
+			<div className="Gr_shiba">
 				十八
 				<Shib></Shib>
 			</div>

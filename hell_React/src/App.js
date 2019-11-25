@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./css/App.css";
 import Login from "./views/Login";
 import Home from "./views/home";
@@ -43,7 +42,7 @@ class App extends React.Component {
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/首页/u60.png?token=4333999d1731542ffff0b055328cf201d02eca48271f3fe2cd429ed534828d17"
                   alt=""
                 /> */}
-                <Link to="/home">首页</Link>
+                <Link to="/home"><i class='iconfont'>&#xe601;</i>首页</Link>
               </li>
 
               <li>
