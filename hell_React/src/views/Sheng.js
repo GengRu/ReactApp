@@ -8,7 +8,7 @@ class Sheng extends React.Component {
     super();
     this.state = {
       index: 0,
-      dieList: [],
+      dieList: "",
       dieArr: [],
       value1: "",
       value2: "",
@@ -106,25 +106,28 @@ class Sheng extends React.Component {
       );
     });
     // 页数
-    var page = Math.ceil(this.state.dieList.length / 9);
-    var a = [];
-    for (let i = 1; i <= page; i++) {
-      a.push(i);
+    if (this.state.dieList) {
+      console.log(1);
+      var page = Math.ceil(this.state.dieList.length / 9);
+      var a = [];
+      for (let i = 1; i <= page; i++) {
+        a.push(i);
+      }
+      // 页数
+      var b = a.map((item, index) => {
+        return (
+          <div
+            key={index}
+            onClick={() => {
+              this.changePage(index);
+            }}
+            style={{ color: this.state.i == index ? "red" : "black" }}
+          >
+            {item}
+          </div>
+        );
+      });
     }
-    // 页数
-    var b = a.map((item, index) => {
-      return (
-        <div
-          key={index}
-          onClick={() => {
-            this.changePage(index);
-          }}
-          style={{ color: this.state.i == index ? "red" : "black" }}
-        >
-          {item}
-        </div>
-      );
-    });
 
     var FormCont = this.state.dieArr.map((i, idx) => {
       // console.log(i.ID);
