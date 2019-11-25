@@ -1,7 +1,8 @@
 import React from "react";
+
 import "./css/App.css";
 import Login from "./views/Login";
-import Home from "./views/Home";
+import Home from "./views/home";
 import Sheng from "./views/Sheng";
 import Gouhun from "./views/Gouhun";
 import Yanwang from "./views/Yanwang";
@@ -29,7 +30,6 @@ class App extends React.Component {
 			<li>
 			  <Link to="/login">Login</Link>
 			</li>
-			
 			<li>
 			  <Link to="/home">Home</Link>
 			</li>

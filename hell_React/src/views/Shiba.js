@@ -1,4 +1,5 @@
 import React from 'react';
+import Shib from './Shi';
 
 class Shiba extends React.Component {
 	constructor() {
@@ -8,6 +9,7 @@ class Shiba extends React.Component {
 		return ( 
 			<div>
 				十八
+				<Shib></Shib>
 			</div>
 		)
 	}

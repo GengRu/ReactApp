@@ -1,0 +1,91 @@
+.Gr_across_con{
+    width:324px;
+    height:264px;
+    padding:12px;
+    background:pink;
+    margin:0 auto;
+    box-sizing: border-box;
+    background:rgb(0, 0, 0,.9);
+}
+.across_head{
+    color:#fff;
+    font-size:12px;
+    text-align: left;
+}
+.conts_one,.conts_two,.conts_three{
+    min-height: 64px;
+    margin-top:10px;
+}
+.Gr_one,.Gr_two,.Gr_one1,.Gr_one2{
+   display: flex;
+}
+.Gr_one{
+    margin-top:5px;
+}
+.Gr_two{
+    padding:0 4px;
+    margin-top:5px;
+    background:#333;
+}
+.Gr_one p:nth-child(1){
+    flex: 1;
+    color:#0fc;
+    font-size:20px;
+    text-align: left;
+}
+.Gr_one p:nth-child(2){
+    flex: 1;
+    color:#0c9;
+    font-size:13px;
+    text-align: right;
+}
+.Gr_one1 p{
+    flex: 1;
+}
+.Gr_one1 p:nth-child(1){
+    color:#0c9;
+    font-size:13px;
+    text-align: left;
+}
+.Gr_one1 p:nth-child(2){
+    color:#f03;
+    font-size:13px;
+    text-align: right;
+}
+
+.Gr_one2 p{
+    flex: 1;
+}
+.Gr_one2 p:nth-child(1){
+    color:#0c9;
+    font-size:13px;
+    text-align: left;
+}
+.Gr_one2 p:nth-child(2){
+    color:#0c9;
+    font-size:13px;
+    text-align: right;
+}
+.Gr_two p:nth-child(1),.Gr_two p:nth-child(2){
+    flex: 1;
+    color:#fff;
+    font-size:12px;
+}
+.Gr_two p:nth-child(1){
+      text-align: left;
+}
+.Gr_two p:nth-child(2){
+    text-align: right;
+}
+/* .conts_one p span:nth-child(1) {
+    color:#0fc;
+    font-size:20px;
+    float: left;
+}
+.conts_one p span:nth-child(2) {
+    color:#0c9;
+    font-size:13px;
+    float: right;
+} */
+
+
