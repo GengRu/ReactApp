@@ -1,0 +1,19 @@
+
+.Gr_con{
+    height:310px;
+    width: 736px;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    padding:10px 10px;
+}
+.Gr_font span:nth-child(1){
+    color:#666;
+    font-size:14px;
+    font-weight:bold;
+    float: left;
+}
+.Gr_font_img{
+    width:16px;
+    height:16px;
+    float: right;
+}
