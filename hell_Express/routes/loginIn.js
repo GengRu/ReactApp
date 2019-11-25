@@ -10,6 +10,7 @@ router.post("/", function(req, res, next) {
     sql: `select * from two_user where id='${json.id}' and pass='${json.password}'`,
     data(data) {
       if (data.length) {
+        // delete data.password
         res.send({
           ok: 0,
           data: data

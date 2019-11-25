@@ -46,7 +46,7 @@ class Immortals extends React.Component {
                 encode: {
                     itemName: 'product',
                     value: '2014'
-                }
+                } 
             }, {
                 type: 'pie',
                 radius: ['40%', '30%'],

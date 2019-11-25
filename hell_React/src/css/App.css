@@ -38,6 +38,9 @@ i {
 
 .Tb_container {
   display: flex;
+} 
+.Tb_container>div {
+  width: 100%;
 }
 .nav {
   float: left;
