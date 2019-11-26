@@ -7,7 +7,6 @@ class Shiba extends React.Component {
 	render() {
 		return ( 
 			<div>
-				十八
 			</div>
 		)
 	}

@@ -10,7 +10,8 @@ import Liudao from "./views/Liudao";
 import Mingbi from "./views/Mingbi";
 import Rizhi from "./views/Rizhi";
 import Xitong from "./views/Xitong";
-
+import Guanli from "./views/Guanli";
+import Jiaos  from "./views/Jiaos"
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,9 +22,11 @@ import {
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      nerr:['首页'],
+      str:true,
+    };      
   }
-
   render() {
     return (
       <Router>
@@ -62,9 +65,8 @@ class App extends React.Component {
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/%E9%A6%96%E9%A1%B5/u73.png?token=0757a414036bb1eb2e90b93e544d1e81fea23ad86940c270c92b4ce366317e00"
                   alt=""
                 />
-                <Link to="/yanwang">阎王审判殿记录</Link>
+                <Link to="/yanwang" ref='yan'>阎王审判殿记录</Link>
               </li>
-
               <li>
                 <img
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/%E9%A6%96%E9%A1%B5/u80.png?token=e9ee6da6444ee39893ee233ca312f54f7a776ab4b378dea455c2b445ca12ce01"
@@ -97,12 +99,29 @@ class App extends React.Component {
                 <Link to="/rizhi">日志管理</Link>
               </li>
 
-              <li>
-                <img
-                  src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/%E9%A6%96%E9%A1%B5/u79.png?token=7c9273afdf1bca127c36bf57d7dd8b028cf3f530d6dd6f927aba13a6abc7bac3"
-                  alt=""
-                />
-                <Link to="/xitong">系统管理</Link>
+              <li ref="ne">
+                <section >
+                  <p className="p-min"
+                  onClick={()=>{
+                  
+                    if(this.state.str){
+                     this.refs.ne.style.height="70px";
+                     this.setState({
+                       str:false
+                     })
+                    }else{
+                     this.refs.ne.style.height="120px";
+                     this.setState({
+                       str:true
+                     })
+                    }
+                 }}><Link to="/xitong">系统管理</Link></p>
+                  <div className="childl">
+                    <p><Link  to="/guanli">管理员</Link></p>
+                    <p><Link  to="/jiaos">角色权限</Link></p>
+                  </div>
+                </section>
+                
               </li>
             </ul>
           </nav>
@@ -149,7 +168,15 @@ class App extends React.Component {
             </Route>
 
             <Route path="/xitong">
-              <Xitong />
+              <Guanli/>
+            </Route>
+
+            <Route path="/Guanli">
+              <Guanli/>
+            </Route>
+
+            <Route path="/Jiaos">
+            <Jiaos/>
             </Route>
           </Switch>
         </div>

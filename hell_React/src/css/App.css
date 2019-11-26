@@ -40,8 +40,7 @@ i {
   display: flex;
 }
 .nav {
-  float: left;
-  background-color: #fff;
+  background: #001529;
   z-index: 9;
   overflow-x: auto;
   width: 200px;
@@ -51,8 +50,9 @@ nav ul li {
   line-height: 76px;
   background: #001529;
   padding-left: 10%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
+  overflow: hidden;
 }
 nav li a,
 li span {
@@ -62,4 +62,19 @@ nav li img {
   width: 18px;
   height: 18px;
   margin-right: 8px;
+}
+nav li section{
+  padding-left:10px;
+ 
+}
+nav li p{
+  font-size:12px;
+  color: #666;
+  line-height: 30px;
+  
+}
+nav li .p-min{
+  font-size:16px;
+  color: #666;
+  line-height: 60px;
 }

@@ -1,0 +1,22 @@
+.Dfw-confie{
+    box-sizing: border-box;
+    margin: 20px;
+    background: #fff;
+    height: 97%;
+}
+.Dfw-Dene{
+   line-height: 30px;
+   padding-left:20px;
+   margin-top:40px;
+}
+.Dfw-contina{
+   flex: 1;
+   background: #ccc;
+}
+.Dfw-cont{
+    font-size: 14px;
+    color: #ccc;
+}
+.Dfw-Dene:hover .Dfw-list{
+    color: cornflowerblue;
+}

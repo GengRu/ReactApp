@@ -1,0 +1,130 @@
+.Dfw-cols{
+    position: relative;
+    top: -144px;
+    z-index: 6;
+    background: #333;
+    width: 103%;
+    padding: 10px;
+    box-sizing: border-box;
+    /* height: 100%; */
+}
+.Dfw-Rew{
+    background: #fff;
+    height: 100%;
+}
+.Dfw-bor{
+    border-bottom:1px solid #ccc ;
+    margin:  18px 0;
+    padding-top:28px;
+    height: 60px;
+}
+.Dfw-New{
+    display: flex;
+    margin-bottom:30px;
+}
+.Dfw-New  p{
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+    margin-right:60px;
+}
+.Dfw-New > div{
+    font-size: 16px;
+    line-height: 36px;
+    width: 236px;
+    border: 1px solid #ccc;
+    padding-left:10px;
+    
+}
+.Dfw-qxian{
+    display: flex;
+    padding-bottom:40px;
+    border-bottom: 1px solid #666;
+}
+.Dfw-Newlist .Dfw-fw{
+    border: none;
+    padding-left:14px;
+    display: flex;
+}
+.Dfw-fw label{
+    font-size: 14px;
+    line-height: 34px;
+}
+.Dfw-fw select{
+    width: 128px;
+    height: 35px;
+}
+.Dfw-qxian > p{
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+    margin-right:68px;
+}
+.Dfw-Newlist > div{
+    width: 852px;
+    height: 115px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+   
+}
+.Dfw-Newlist .Dfw-title{
+    font-size: 12px;
+    padding-left:10px;
+    line-height: 40px;
+}
+
+.Dfw-fw section{
+    display: inline-block;
+    margin-left:40px;
+    /* margin-top: -28px; */
+}
+.Dfw-fw section ::after{
+    content: '';
+    width: 0;
+    border: 14px solid transparent;
+    border-bottom:2px solid #fff;
+    border-right:2px solid #fff;
+    transform: rotate(36deg);
+    display: block;
+    margin: 0 auto;
+}
+.Dfw-fw section p{
+    display: inline-block;
+    font-size: 14px;
+}
+.st2{
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    border: 1px solid #ccc;
+    margin-right:8px;
+    margin-top:-5px;
+    position: relative;
+    top: 10px;
+}
+.Dfw-determine{
+   height: 140px;
+   margin-top: 20px;
+}
+.Dfw-determine button{
+    margin-left:24px;
+    width: 140px;
+    height: 40px;
+    background: inherit;
+    background-color: rgba(0, 153, 255, 1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.Dfw-determine .Dfw-call{
+    width: 140px;
+    height: 40px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 3px;
+    color: rgba(0, 153, 255, 1);
+}
