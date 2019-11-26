@@ -4,7 +4,7 @@
 }
 .Tb_home_cont_bg {
   width: 100%;
-  background-color: #ccc;
+  background-color: rgba(240, 242, 245, 1);
   padding: 20px;
   box-sizing: border-box;
 }

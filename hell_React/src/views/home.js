@@ -5,6 +5,8 @@ import Tb_head from "../components/head_g/head";
 import Tb_home_top from "../components/home/top/top";
 import Tb_cont_title from "../components/home/cont_title/cont_title";
 import Tb_common_nav from "../components/home/common_nav/common_nav";
+import Line_char from '../echarts/Line_char'
+import Pie_char from '../echarts/Pie_char'
 class Home extends React.Component {
   constructor() {
     super();
@@ -156,10 +158,11 @@ class Home extends React.Component {
               <div className="Tb_home_bottom_cont">
                 <div className="Tb_home_bottom_contL">
                   <Tb_cont_title title="地府出入境人数" />
-                  {/* <Line_char></Line_char> */}
+                  <Line_char></Line_char>
                 </div>
                 <div className="Tb_home_bottom_contR">
                   <Tb_cont_title title="各层地狱人数" />
+				          <Pie_char></Pie_char>
                 </div>
               </div>
             </div>

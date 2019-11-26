@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/App.css";
 import Login from "./views/Login";
-import Home from "./views/home";
+import Home from "./views/Home";
 import Sheng from "./views/Sheng";
 import Gouhun from "./views/Gouhun";
 import Yanwang from "./views/Yanwang";
