@@ -17,6 +17,9 @@ class Runnum extends React.Component {
                             if(index==num){
                                 window.history.back();
                             }  
+                            if (index == 0) {
+                                window.location.href = "/home"
+                            }
                         }}> 
                            <span className="span">
                                 {item}
