@@ -25,6 +25,8 @@
 	float: right;
 	color: rgba(255, 255, 255, 0.686);
 	padding-right: 20px;
+	position: relative;
+	z-index: 99;
 }
 
 .Zxr_shuju_top_right span{

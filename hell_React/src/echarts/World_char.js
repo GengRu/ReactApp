@@ -414,7 +414,7 @@ class Immortals extends React.Component {
 	}
 	render() {
 		return (
-          <div id = "Gr_world" style={{width: '140%',height: '140%',background:'rgb(0,0,0,.7)',position: "absolute",left:"-280px",}}></div>
+          <div id = "Gr_world" style={{width: '140%',height: '155%',background:'rgb(0,0,0,.7)',position: "absolute",left:"-280px",}}></div>
 		)
 	}
 	componentDidMount() {
