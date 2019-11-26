@@ -9,6 +9,13 @@ import Shiba from "./views/Shiba";
 import Liudao from "./views/Liudao";
 import Mingbi from "./views/Mingbi";
 import Rizhi from "./views/Rizhi";
+
+import Xitong from "./views/Xitong";
+
+
+
+
+
 import Guanli from "./views/Guanli";
 import Jiaos from "./views/Jiaos";
 import Shuju from "./views/Shuju";
@@ -63,6 +70,7 @@ class App extends React.Component {
 
   render() {
     return (
+    
       <Router>
         <div className="Tb_container">
           <nav className="nav" ref="nav">
@@ -233,6 +241,7 @@ class App extends React.Component {
           </Switch>
         </div>
       </Router>
+   
     );
   }
 }
