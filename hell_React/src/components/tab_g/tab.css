@@ -1,0 +1,24 @@
+
+.Zxr_sheng_box_nav{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.Zxr_sheng_box_nav div div{
+	float: left;
+	width: 76px;
+	text-align: center;
+	font-size: 13px;
+	padding: 5px 0;
+	color: #999999;
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_nav div div:hover{
+	border-bottom: 3px solid #999999 !important;
+}
+
+.Zxr_sheng_active{
+	color: #0099FF !important;
+	border-bottom: 3px solid #0099FF !important;
+}

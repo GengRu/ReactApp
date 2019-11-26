@@ -43,8 +43,7 @@ i {
   width: 100%;
 }
 .nav {
-  float: left;
-  background-color: #fff;
+  background: #001529;
   z-index: 9;
   overflow-x: auto;
   width: 200px;
@@ -53,10 +52,15 @@ i {
 }
 nav ul li {
   font-size: 16px;
-  line-height: 76px;
+  line-height: 60px;
+  background: #001529;
   padding-left: 10%;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+.Dfw-cimg{
+  margin-top:0px;
 }
 nav li a,
 li span {
@@ -66,4 +70,19 @@ nav li img {
   width: 18px;
   height: 18px;
   margin-right: 8px;
+}
+nav li section{
+  padding-left:10px;
+  height:60px;
+}
+nav li p{
+  font-size:12px;
+  color: #666;
+  line-height: 30px;
+  
+}
+nav li .p-min{
+  font-size:16px;
+  color: #666;
+  line-height: 60px;
 }

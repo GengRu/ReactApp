@@ -1,0 +1,48 @@
+.Tb_gouhun {
+  width: 100%;
+  height: 100vh;
+}
+.Tb_gouhun_cont_bg {
+  width: 100%;
+  background-color: rgba(240, 242, 245, 1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+.Tb_gouhun_cont {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.Zxr_sheng_box_title {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+. .Zxr_sheng_box_inputBox {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.Zxr_sheng_box_inputBox_search {
+  width: 278px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  border-radius: 2px;
+  overflow: hidden;
+  float: left;
+}
+
+.Zxr_sheng_box_inputBox_search span {
+  float: right;
+  width: 15px;
+  height: 15px;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.Zxr_sheng_box_inputBox_search span img {
+  width: 100%;
+  height: 100%;
+}

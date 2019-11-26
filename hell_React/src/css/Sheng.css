@@ -28,29 +28,6 @@
 	margin-right: 5px;
 }
 
-.Zxr_sheng_box_nav{
-	overflow: hidden;
-	margin-bottom: 20px;
-}
-
-.Zxr_sheng_box_nav div{
-	float: left;
-	width: 76px;
-	text-align: center;
-	font-size: 13px;
-	padding: 5px 0;
-	color: #999999;
-	cursor: pointer;
-}
-
-.Zxr_sheng_box_nav div:hover{
-	border-bottom: 3px solid #999999 !important;
-}
-
-.Zxr_sheng_active{
-	color: #0099FF !important;
-	border-bottom: 3px solid #0099FF !important;
-}
 
 .Zxr_sheng_box_inputBox{
 	overflow: hidden;
@@ -140,50 +117,7 @@
 	color: #0099FF;
 }
 
-.Zxr_sheng_box_Form_cont{
-	width: 100%;
-	height: 53px;
-	display: flex;
-	border-bottom: 1px solid #ccc;
-	font-size: 13px;
-}
 
-.Zxr_sheng_box_Form_cont_all{
-	float: left;
-	height: 53px;
-	line-height: 53px;
-	text-align: center;
-	flex: 1;
-	border-right: 1px solid #ccc;
-}
-
-.Zxr_sheng_box_Form_cont div:nth-last-child(1){
-	border-right: none;
-}
-
-.Zxr_sheng_box_Form_cont_btn{
-	display: inline-block;
-	color: #0099FF;
-	padding: 0 5px;
-	cursor: pointer;
-}
-
-.Zxr_sheng_box_Form_cont_img{
-	width: 24px;
-	height: 24px;
-	background-color: #0099FF;
-	border-radius: 50%;
-	position: relative;
-	bottom: -25px;
-	left: 20px;
-}
-
-.Zxr_sheng_box_Form_cont_img img{
-	width: 16px;
-	height: 10px;
-	position: absolute;
-	top: 9px;left: 5px;
-}
 
 .Zxr_sheng_box_Form_foot{
 	overflow: hidden;
@@ -215,65 +149,4 @@
 	margin-left: 50px;
 }
 
-.Zxr_sheng_box_Form_foot_right{
-	float: right;
-}
-
-.Zxr_sheng_box_Form_foot_right span{
-	float: left;
-	line-height: 50px;
-	margin-right: 5px;
-}
-
-.Zxr_sheng_box_Form_foot_right_ye{
-	display: inline-block;
-	overflow: hidden;
-	padding: 12.5px 0;
-}
-
-.Zxr_sheng_box_Form_foot_right_ye div{
-	float: left;
-	width: 35px;
-	height: 25px;
-	line-height: 25px;
-	text-align: center;
-	color: #CCC;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	margin: 0 3px;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.Zxr_sheng_box_Form_foot_right_to{
-	display: inline-block;
-	float: right;
-	padding: 12.5px;
-	overflow: hidden;
-}
-
-.Zxr_sheng_box_Form_foot_right_to_input{
-	display: inline-block;
-	width: 35px;
-	height: 25px;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	overflow: hidden;
-	float: left;
-}
-
-.Zxr_sheng_box_Form_foot_right_to_input input{
-	width: 100%;
-	height: 100%;
-	text-align: center;
-}
-
-.Zxr_sheng_box_Form_foot_right_to span{
-	float: none;
-	display: inline-block;
-	line-height: 25px;
-	margin-right: 0;
-	float: left;
-}
 
