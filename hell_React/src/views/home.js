@@ -105,6 +105,52 @@ class Home extends React.Component {
                 </div>
                 <div className="Tb_home_bottom_contR">
                   <Tb_cont_title title="今日待办" />
+                  <div className="today_t">
+                    <span className="todayTime">AM:9:00</span>
+                    <span>大事件审判</span>
+                  </div>
+                  <div>
+                    <div className="todayHuiyi">
+                      <span className="todayHYfirst">时间：</span>
+                      <span>3029年2月29日</span>
+                    </div>
+                    <div className="todayHuiyi">
+                      <span className="todayHYfirst">地点：</span>
+                      <span>会议室2938</span>
+                    </div>
+                  </div>
+                  <div className="todayImg">
+                    <img
+                      src="https://tse3-mm.cn.bing.net/th?id=OIP.QNGmLsUJkqUpgMbYBMpPqQAAAA&w=214&h=214&c=7&o=5&pid=1.7"
+                      alt=""
+                    />
+                    <img
+                      src="https://tse4-mm.cn.bing.net/th?id=OIP.LTyzkbnUGUWY1k91-NpAEQAAAA&w=214&h=214&c=7&o=5&pid=1.7"
+                      alt=""
+                    />
+                    <img
+                      src="https://tse4-mm.cn.bing.net/th?id=OIP.iZQAX1b7IKYOJclLYi4tzAAAAA&w=215&h=214&c=7&o=5&pid=1.7"
+                      alt=""
+                    />
+                    <img
+                      src="https://tse2-mm.cn.bing.net/th?id=OIP.pqZF07ue6J-7QS3D3Yo6DQAAAA&w=215&h=214&c=7&o=5&pid=1.7"
+                      alt=""
+                    />
+                    <img
+                      src="https://tse2-mm.cn.bing.net/th?id=OIP.0f6mQ_OrKk4Kwf6zaWSeRgAAAA&w=215&h=214&c=7&o=5&pid=1.7"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div className="todayHuiyi">
+                      <span className="todayHYfirst">时间：</span>
+                      <span>3029年2月29日</span>
+                    </div>
+                    <div className="todayHuiyi">
+                      <span className="todayHYfirst">地点：</span>
+                      <span>会议室2938</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="Tb_home_bottom_cont">

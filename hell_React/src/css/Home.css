@@ -4,7 +4,6 @@
 }
 .Tb_home_cont_bg {
   width: 100%;
-  height: 100%;
   background-color: #ccc;
   padding: 20px;
   box-sizing: border-box;
@@ -24,11 +23,47 @@
 .Tb_home_bottom_cont {
   display: flex;
 }
-.Tb_home_bottom_contL, .Tb_home_bottom_contR {
+.Tb_home_bottom_contL,
+.Tb_home_bottom_contR {
   padding: 10px;
   border: 1px solid #ccc;
   margin-top: 10px;
 }
 .Tb_home_bottom_contL {
   margin-right: 10px;
+  width: 66%;
+}
+.Tb_home_bottom_contR {
+  width: 40%;
+}
+.today_t {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgb(100, 100, 233)
+}
+.today_t .todayTime {
+  padding: 0 50px 0 10px;
+}
+.todayHuiyi {
+  font-size: 12px;
+  line-height: 30px;
+  color: #333;
+}
+.todayHYfirst {
+  padding: 0 50px 0 10px;
+}
+.todayImg {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.todayImg img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
 }

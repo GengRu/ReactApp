@@ -1,0 +1,19 @@
+/* 容器 */
+.Gr_piechar_con{
+    width:403px;
+    height:310px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    padding:10px;
+}
+/* font */
+.Gr_pie_font span:nth-child(1){
+   float: left;
+   color:#666;
+   font-size:14px;
+   font-weight:bold;
+}
+#Gr_pie{
+    margin-top:40px;
+}

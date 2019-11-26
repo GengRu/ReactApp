@@ -38,6 +38,9 @@ i {
 
 .Tb_container {
   display: flex;
+} 
+.Tb_container>div {
+  width: 100%;
 }
 .nav {
   float: left;
@@ -45,11 +48,12 @@ i {
   z-index: 9;
   overflow-x: auto;
   width: 200px;
+  background: #001529;
+  height: 1000px;
 }
 nav ul li {
   font-size: 16px;
   line-height: 76px;
-  background: #001529;
   padding-left: 10%;
   display: flex;
   align-items: center;

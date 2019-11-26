@@ -1,5 +1,5 @@
 import React from "react";
-import "./head.css"
+import "./head.css";
 class Tb_head extends React.Component {
   constructor() {
     super();
@@ -8,14 +8,14 @@ class Tb_head extends React.Component {
     };
   }
   componentWillMount() {
-    var login = JSON.parse(window.localStorage.login).data[0];
+    var login = JSON.parse(window.sessionStorage.login).data[0];
     // console.log(login);
     this.setState({
       login: login
     });
   }
   back() {
-    localStorage.login = "";
+    sessionStorage.login = "";
     window.location.href = "./";
   }
   render() {

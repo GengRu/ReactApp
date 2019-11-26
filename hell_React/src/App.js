@@ -15,23 +15,24 @@ import Xitong from "./views/Xitong";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 class App extends React.Component {
-	constructor() {
-		super();
+  constructor() {
+    super();
     this.state = {};
   }
 
   componentDidMount() {
     // console.log(this.refs);
-    if (localStorage.login) {
-      this.refs.nav.style.display = "block"
+    if (sessionStorage.login) {
+      this.refs.nav.style.display = "block";
     } else {
       // console.log(2);
-      this.refs.nav.style.display = "none"
+      this.refs.nav.style.display = "none";
     }
   }
 
   render() {
     return (
+    
       <Router>
         <div className="Tb_container">
           <nav className="nav" ref="nav">
@@ -160,6 +161,7 @@ class App extends React.Component {
           </Switch>
         </div>
       </Router>
+   
     );
   }
 }

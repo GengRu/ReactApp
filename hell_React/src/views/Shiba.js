@@ -8,10 +8,10 @@ class Shiba extends React.Component {
 		super(props)
 		this.state={
 			arr:[
-				{xinfa:"刀山",persoon:'张三',times:'10年'},
-				{xinfa:"火海",persoon:'张三',times:'10年'},
-				{xinfa:"拔舌",persoon:'张三',times:'10年'},
-				{xinfa:"油锅",persoon:'张三',times:'10年'}
+				{xinfa:"刀山",person:'张三',times:'10年'},
+				{xinfa:"火海",person:'李四',times:'300年'},
+				{xinfa:"拔舌",person:'尼古拉斯',times:'500年'},
+				{xinfa:"油锅",person:'上官山炮',times:'250年'}
 			]
 		}
 	}
@@ -26,9 +26,14 @@ class Shiba extends React.Component {
 						<p className="Zjt_tit">设备管理</p>
 					</div>
 					<div className="Zjt_cont">
-						<div className="item">
-							<Punishment></Punishment>
-						</div>
+						{this.state.arr.map((item,index)=>{
+							// console.log(item)
+							return(
+								<div className="item" key={index}>
+									<Punishment nnn={item}></Punishment>
+								</div>
+							)
+						})}
 					</div>
 				</div>
 			</div>
