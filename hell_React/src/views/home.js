@@ -5,17 +5,17 @@ import Tb_head from "../components/head_g/head";
 import Tb_home_top from "../components/home/top/top";
 import Tb_cont_title from "../components/home/cont_title/cont_title";
 import Tb_common_nav from "../components/home/common_nav/common_nav";
-import Line_char from '../echarts/Line_char'
-import Pie_char from '../echarts/Pie_char'
+import Line_char from "../echarts/Line_char";
+import Pie_char from "../echarts/Pie_char";
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
       data: [
-        { bgColor: "red", title: "地府人数" },
-        { bgColor: "cyan", title: "今日入境" },
-        { bgColor: "#05f", title: "今日处境" },
-        { bgColor: "#f0f", title: "管理员" }
+        { bgColor: "#00de8c", title: "地府人数", path: "/shuju" },
+        { bgColor: "#0b81f4", title: "今日入境", path: "/home" },
+        { bgColor: "#003447", title: "今日处境", path: "/home" },
+        { bgColor: "#ff5e1a", title: "管理员", path: "/home" }
       ],
       count: [],
       common_nav: [
@@ -72,6 +72,7 @@ class Home extends React.Component {
   }
   //请求首页标题数据
   componentWillMount() {
+    console.log(this.props);
     var arr = [];
     axios.get("/home").then(data => {
       var json = data.data.data[0];
@@ -162,7 +163,7 @@ class Home extends React.Component {
                 </div>
                 <div className="Tb_home_bottom_contR">
                   <Tb_cont_title title="各层地狱人数" />
-				          <Pie_char></Pie_char>
+                  <Pie_char></Pie_char>
                 </div>
               </div>
             </div>

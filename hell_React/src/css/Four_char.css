@@ -2,5 +2,7 @@
     width:324px;
     height:264px;
     background:pink;
-    margin:0 auto;
+    position: absolute;
+    right: 0;
+    top: 548px;
 }

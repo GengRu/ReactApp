@@ -68,6 +68,7 @@ class Login_Cont extends React.Component {
         // alert('登录成功');
         window.location.href = "/home";
         window.sessionStorage.login = JSON.stringify(data.data);
+        window.sessionStorage.type = true;
       } else if (data.data.ok == 1) {
         alert("账号或密码错误");
       } else if (data.data.ok == 2) {
