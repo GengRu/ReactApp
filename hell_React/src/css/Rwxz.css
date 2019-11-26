@@ -2,7 +2,7 @@
     position: relative;
     top: -144px;
     z-index: 6;
-    background: #333;
+    background: #ccc;
     width: 103%;
     padding: 10px;
     box-sizing: border-box;
@@ -27,6 +27,7 @@
     color: #333;
     line-height: 36px;
     margin-right:60px;
+    padding-left:6px;
 }
 .Dfw-New > div{
     font-size: 16px;
@@ -35,6 +36,9 @@
     border: 1px solid #ccc;
     padding-left:10px;
     
+}
+.Dfw-New > div:hover{
+    border-color: #2196f3;
 }
 .Dfw-qxian{
     display: flex;
@@ -59,6 +63,7 @@
     color: #333;
     line-height: 36px;
     margin-right:68px;
+    padding-left:6px;
 }
 .Dfw-Newlist > div{
     width: 852px;
@@ -66,6 +71,9 @@
     border: 1px solid #ccc;
     margin-bottom: 30px;
    
+}
+.Dfw-Newlist > div:hover{
+    border-color: #2196f3;
 }
 .Dfw-Newlist .Dfw-title{
     font-size: 12px;
