@@ -47,12 +47,15 @@ i {
 }
 nav ul li {
   font-size: 16px;
-  line-height: 76px;
+  line-height: 60px;
   background: #001529;
   padding-left: 10%;
-  /* display: flex; */
+  display: flex;
   align-items: center;
   overflow: hidden;
+}
+.Dfw-cimg{
+  margin-top:0px;
 }
 nav li a,
 li span {
@@ -65,7 +68,7 @@ nav li img {
 }
 nav li section{
   padding-left:10px;
- 
+  height:60px;
 }
 nav li p{
   font-size:12px;
