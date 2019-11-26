@@ -1,4 +1,5 @@
 import React from 'react';
+import Shib from './Shi';
 
 class Shiba extends React.Component {
 	constructor() {

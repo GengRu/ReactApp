@@ -1,0 +1,19 @@
+
+.Tb_home_bottom_cont h5 {
+  height: 25px;
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.Tb_home_bottom_cont h5 .Tb_more {
+  width: 10px;
+  height: 25px;
+}
+.Tb_home_bottom_cont h5 .Tb_more i {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 4px auto;
+}

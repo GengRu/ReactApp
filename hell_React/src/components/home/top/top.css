@@ -1,0 +1,13 @@
+.Tb_home_top_cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.top_cont {
+  text-align: center;
+  width: 24%;
+  padding: 45px 0;
+}
+.top_cont p {
+  line-height: 30px;
+}

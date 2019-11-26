@@ -2,12 +2,14 @@ var express = require("express");
 var mysql = require("./sql");
 var router = express.Router();
 
-// 登录
-router.post("/loginIn", function(req, res, next) {
-  var json = req.data;
-  // 判断登陆
+/* GET home page. */
+router.get("/", function(req, res, next) {
   mysql.sql({
+<<<<<<< HEAD:hell_Express/routes/api.js
     sql: `select * from one_login where id='${json.id}' and pass='${json.password}'`,
+=======
+    sql: `select * from two_homeTitleData`,
+>>>>>>> e760c26cc4c6df708fd3abef3cbc8a5a4f3561c9:hell_Express/routes/home.js
     data(data) {
       if (data.length) {
         res.send({
@@ -22,10 +24,6 @@ router.post("/loginIn", function(req, res, next) {
       }
     }
   });
-});
-
-router.get("/loginIn", function(req, res, next) {
-	res.send('777777');
 });
 
 module.exports = router;

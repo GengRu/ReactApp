@@ -9,7 +9,6 @@ import Shiba from "./views/Shiba";
 import Liudao from "./views/Liudao";
 import Mingbi from "./views/Mingbi";
 import Rizhi from "./views/Rizhi";
-import Xitong from "./views/Xitong";
 import Guanli from "./views/Guanli";
 import Jiaos  from "./views/Jiaos"
 import {
@@ -18,7 +17,6 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-
 class App extends React.Component {
   constructor() {
     super();
@@ -31,7 +29,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="Tb_container">
-          <nav className="nav">
+          <nav className="nav" ref="nav">
             <ul>
               <li>
                 <span>地府管理系统</span>
@@ -40,7 +38,7 @@ class App extends React.Component {
                 <img
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/首页/u60.png?token=02a22eb478ee31fa8de9cdfccf887aa87fb6dc2a10f05e4a751111efa8909481"
                   alt=""
-                />
+                /> 
                 <Link to="/home">首页</Link>
               </li>
 
@@ -48,7 +46,7 @@ class App extends React.Component {
                 <img
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/首页/u62.png?token=bc5f1d4a32065c8ecbd9adc78dbe2abd39582da1db59eeb0066b1b7242b51a50"
                   alt=""
-                />
+                /> 
                 <Link to="/sheng">生死薄</Link>
               </li>
 
@@ -56,7 +54,7 @@ class App extends React.Component {
                 <img
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/首页/u71.png?token=ae83ffc22f60695b114c480e53e5cd10175b85afb96b5125de6a1251e46d0ffb"
                   alt=""
-                />
+                /> 
                 <Link to="/gouhun">勾魂管理</Link>
               </li>
 
@@ -79,7 +77,7 @@ class App extends React.Component {
                 <img
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/首页/u81.png?token=99198544887a3e13ae70cd7490a784bda627357e15f56ab94cc421f70fc57ec5"
                   alt=""
-                />
+                /> 
                 <Link to="/liudao">六道轮回</Link>
               </li>
 
@@ -129,8 +127,8 @@ class App extends React.Component {
           {/* A <Switch> looks through its children <Route>s and
 	        renders the first one that matches the current URL. */}
           <Switch>
-						{/* <Redirect from="/" to="/login" /> */}
-						
+            {/* <Redirect from="/" to="/login" /> */}
+
             <Route exact path="/">
               <Login />
             </Route>

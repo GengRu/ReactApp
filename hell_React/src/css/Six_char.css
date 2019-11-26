@@ -1,0 +1,51 @@
+/* 容器 */
+.Gr_six_con{
+    width:100%;
+    height:100%;
+}
+/* echarts+三角 */
+.Gr_img{
+width:430px;
+height:430px;
+margin:0 auto;
+background:black;
+border-radius: 50%;
+position: relative;
+z-index: 88;
+top:70px;
+}
+.Gr_triangle{
+    width:100px;
+    height:70px;
+    position: absolute;
+    left:165px;
+    top:-20px;
+    z-index: 99;
+}
+
+.Gr_triangle:before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:5px;
+    border-top:50px solid green;
+    border-left:50px solid transparent;
+    border-right:50px solid transparent;
+}
+
+#Gr_six{
+    position: absolute;
+    left:-33px;
+    top:-34px;
+}
+/* 按钮 */
+.Gr_sixbtn{
+    width:200px;
+    color:#fff;
+    font-size:18px;
+    line-height: 60px;
+    background:#09f;
+    margin:120px auto;
+    border-radius: 5px;
+    
+}

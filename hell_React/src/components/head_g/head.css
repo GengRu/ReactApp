@@ -1,0 +1,32 @@
+
+.Tb_home_header {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  padding-left: 70%;
+  box-sizing: border-box;
+}
+.Tb_home_headerCont {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.Tb_home_header .head_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.Tb_home_header .head_img img {
+  width: 100%;
+  height: 100%;
+}
+.Tb_username {
+  margin-right: 50px;
+}
+.Tb_back {
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
