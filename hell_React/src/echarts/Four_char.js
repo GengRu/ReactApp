@@ -16,52 +16,72 @@ class Immortals extends React.Component {
 	componentDidMount() {
 		var myChart = Echarts.init(document.getElementById('Gr_four'));
         var option = {
-           
             dataset: {
-                source: [
-                    ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
-                    ['Matcha Latte', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7],
-                    ['Milk Tea', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1],
-                    // ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5],
-                    // ['Walnut Brownie', 55.2, 67.1, 69.2, 72.4, 53.9, 39.1]
-                ]
+            source: [
+            // ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
+            // [ 41.1, 30.4, 65.1, 53.3, 83.8,],
+            // [ 86.5, 92.1, 85.7, 83.1, 73.4,],
+            ],
             },
             series: [{
-                type: 'pie',
-                radius: ['40%', '30%'],
-                center: ['25%', '25%']
-                // No encode specified, by default, it is '2012'.
+            type: 'pie',
+            radius: ['40%', '30%'],
+            center: ['25%', '25%'],
+            label:{
+            normal:{
+            position:'inner',
+            formatter: '{b} {d}% ',
+            show:true,
+            // formatter:function(){
+            // return '一个指标'
+            // }
+            }
+            }, 
+            data:[33,23]
             }, {
-                type: 'pie',
-                radius: ['40%', '30%'],
-                center: ['75%', '25%'],
-                encode: {
-                    itemName: 'product',
-                    value: '2013'
-                }
+            type: 'pie',
+            radius: ['40%', '30%'],
+            center: ['75%', '25%'],
+            // seriesLayoutBy: 'row',
+            label:{
+            normal:{
+            position:'inner',
+            formatter: '{b} {d}% ',
+            show:false
+            }
+            },
+            itemStyle:{
+            color:['orange','red']
+            },
+            data:[43,23]
             }, {
-                type: 'pie',
-                radius: ['40%', '30%'],
-                center: ['25%', '75%'],
-                encode: {
-                    itemName: 'product',
-                    value: '2014'
-                } 
+            type: 'pie',
+            radius: ['40%', '30%'],
+            center: ['25%', '75%'],
+            label:{
+            normal:{
+            position:'inner',
+            formatter: '{b} {d}% ',
+            show:false
+            }
+            },
+            data:[33,23]
             }, {
-                type: 'pie',
-                radius: ['40%', '30%'],
-                center: ['75%', '75%'],
-                itemStyle:{
-                    normal:{
-                        color:'orange'
-                    }
-                },
-                encode: {
-                    itemName: 'product',
-                    value: '2015'
-                }
+            type: 'pie',
+            radius: ['40%', '30%'],
+            center: ['75%', '75%'],
+            avoidLabelOverlap: false,
+            // hoverAnimation:false,
+            label:{
+            normal:{
+            position:'inner',
+            formatter: '{b} {d}% ',
+            show:false
+            }
+            },
+            data:[12,33]
             }]
-        };
+            };
         
         myChart.setOption(option);
     }

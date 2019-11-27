@@ -10,6 +10,7 @@ class Table extends React.Component {
     var arr = [];
     if (this.props.dieArr) {
       for (var key in this.props.dieArr[0]) {
+        console.log(key);
         arr.push(key);
       }
       arr.pop();
