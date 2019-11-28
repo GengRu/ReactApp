@@ -22,8 +22,8 @@ class Yanwang extends React.Component {
 		if (this.state.ens) {
 			var as = this.state.ens.map((item, index) => {
 				return (
-					<Router>
-						<div className="Dfw-nod" key={index}>
+					<Router key={index}>
+						<div className="Dfw-nod" >
 							<Link to="/Gus"><h4 className="Dfw-list" ref="list">{item.name}</h4></Link>
 							<div className="Dfw-cont">{item.title}</div>
 						</div>
@@ -37,7 +37,6 @@ class Yanwang extends React.Component {
 			})
 		}
 		var s=document.querySelector('.Dfw-confie');
-		console.log(s)
 		return (
 			<div className="Dfw-contina">
 				<div className="Dfw-confie">
@@ -51,7 +50,6 @@ class Yanwang extends React.Component {
 	}
 	componentDidMount() {
 		axios.post("/goss").then(data => {
-			console.log(data)
 			var ser = data.data.data
 			this.setState({
 				ens: ser

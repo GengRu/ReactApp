@@ -1,7 +1,8 @@
 import React from 'react';
 import Runnum from '../components/Runnum/Dfw-runnum.js';
 import '../css/Jiaos.css';
-import Rwxz from './Rwxz'
+import Rwxz from './Rwxz';
+import axios from 'axios'
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,29 +11,43 @@ import {
   } from "react-router-dom";
 class Jiaos extends React.Component {
 	constructor() {
-		super()
+        super()
+        this.state={
+            ens:''
+        }
 	}
 	render() {
-		return ( 
-			<div className="Dfw-Jsbox">
-                <div className="Dfw-Run"><Runnum value={['首页','系统管理','角色权限']}/></div>
-                <Router>
+        if(this.state.ens){
+            var nes=this.state.ens.map((item,index)=>{
+                return(
+                    <Router key={index}>
                     <div className="Dfw-Rwxz">
-                        <h4><Link  to="/rwxz">判官</Link></h4>
-                        <p>
-                            长的凶神恶煞、阴险狡诈，但绝大部分都心底善良、正直。决大部分是判处人的轮回生死，对坏人进行惩罚，对好人进行奖励。判官取材于中国传统文化中的冥府判官
-                        </p>
+                        <h4><Link  to="/rwxz">{item.name}</Link></h4>
+                        <p>{item.title}</p>
                         <Switch>
                             <Route path="/Rwxz">
-                                <Rwxz/>
+                                <Rwxz value={item}/>
                             </Route>
                         </Switch>
                     </div>
                 </Router>
+                )
+            })
+        }
+		return ( 
+			<div className="Dfw-Jsbox">
+                <div className="Dfw-Run"><Runnum value={['首页','系统管理','角色权限']}/></div>
+                {nes}
 			</div>
 		)
 	}
-
+componentDidMount(){
+    axios.post("/rygl").then(data=>{
+       this.setState({
+           ens:data.data.data
+       })
+    })
+}
 }
 
 export default Jiaos 

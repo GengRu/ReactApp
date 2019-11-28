@@ -1,12 +1,13 @@
 .Dfw-cols{
-    position: relative;
-    top: -144px;
+    position: absolute;
+    top: 0;
     z-index: 6;
     background: #ccc;
-    width: 103%;
+    width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    /* height: 100%; */
+    height: 800px;
+    background: #fff;
 }
 .Dfw-Rew{
     background: #fff;

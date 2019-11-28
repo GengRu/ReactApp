@@ -12,7 +12,9 @@ var gouhun = require('./routes/gouhun');
 var mingbi = require('./routes/mingbi');
 var rizhi = require('./routes/rizhi');
 var goss = require('./routes/goss');
-
+var rygl = require('./routes/rygl');
+var mins = require('./routes/mins');
+var seng = require('./routes/seng');
 var app = express();
 
 // view engine setup
@@ -54,7 +56,9 @@ app.use('/gouhun', gouhun);
 app.use('/mingbi', mingbi);
 app.use('/rizhi', rizhi);
 app.use('/goss', goss);
-
+app.use('/rygl', rygl);
+app.use('/mins', mins);
+app.use('/seng', seng);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

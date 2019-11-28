@@ -11,17 +11,18 @@ class Docms extends React.Component {
             <div>
                 <section>
                     <p className="st2" onClickCapture={(ev) => {
-                        
-                        if (this.props.value.s) {
-                            console.log(this.props.value)
+                        if (this.state.str) {
                             ev.target.style.background = "#0099ff";
-                            this.props.value.s=false
+                           this.setState({
+                               str:false
+                           })
                         } else {
-                            console.log(this.props.value)
                             ev.target.style.background = "#fff";
-                             this.props.value.s=true
+                             this.setState({
+                                 str:true
+                             })
                         }
-                    }}></p><p>{this.props.value.n}</p>
+                    }}></p><p>{this.props.value}</p>
                 </section>
             </div>
         )
