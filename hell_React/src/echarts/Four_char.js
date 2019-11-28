@@ -81,7 +81,7 @@ class Immortals extends React.Component {
                 },
                 data:[12,33]
             }]
-        };
+            };
         
         myChart.setOption(option);
     }

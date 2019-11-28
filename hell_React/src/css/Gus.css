@@ -10,16 +10,20 @@
     font-size: 14px;
 }
 .Dfw-Gus{
-    top:-130px;
+    top: 20px;
     background: #fff;
-    position: relative;
+    position: absolute;
     z-index: 4;
+    width: 82%;
+    height: 100%;
+    left: 228px;
 }
 .Dfw-item p{
     margin-bottom:20px;
 }
 .Dfw-item {
     border-bottom:1px solid #ccc;
+    padding-bottom:100px;
 }
 .Dfw-sen button{
     border-radius:4px;

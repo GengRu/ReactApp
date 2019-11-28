@@ -12,10 +12,6 @@ import Rizhi from "./views/Rizhi";
 
 import Xitong from "./views/Xitong";
 
-
-
-
-
 import Guanli from "./views/Guanli";
 import Jiaos from "./views/Jiaos";
 import Shuju from "./views/Shuju";
@@ -43,17 +39,29 @@ class App extends React.Component {
     this.state = {
       nerr: ["首页"],
       str: true,
-      type: ""
+      type: false
     };
   }
 
   componentDidMount() {
-    console.log(sessionStorage.type);
-    if (sessionStorage.type == "true") {
-      this.setType(true);
+    if (sessionStorage.length) {
+      if (sessionStorage.type == "true") {
+        this.setType(true);
+      } else {
+        this.setType(false);
+      }
+      if (
+        sessionStorage.login == "" ||
+        window.location.href == "http://localhost:3000/shuju"
+      ) {
+        this.setType(false);
+      } else {
+        this.setType(true);
+      }
     } else {
       this.setType(false);
     }
+    
   }
   componentDidUpdate() {
     if (this.state.type == true) {
@@ -70,7 +78,6 @@ class App extends React.Component {
 
   render() {
     return (
-    
       <Router>
         <div className="Tb_container">
           <nav className="nav" ref="nav">
@@ -163,9 +170,7 @@ class App extends React.Component {
               <Login />
             </Route>
 
-            <Route path="/home" component={Home}>
-              
-            </Route>
+            <Route path="/home" component={Home}></Route>
 
             <Route path="/sheng">
               <Sheng />
@@ -217,7 +222,6 @@ class App extends React.Component {
           </Switch>
         </div>
       </Router>
-   
     );
   }
 }
