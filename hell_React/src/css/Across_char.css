@@ -1,14 +1,35 @@
-.Gr_across_con{
-    width:324px;
+
+.Gr_across_cons{
+    width:380px;
     height:264px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    display: flex;
+}
+.Gr_sidebar{
+    width:42px;
+    margin-right:14px;
+    background:rgb(0, 0, 0,.9);
+    padding:10px 0 0 12px;
+    box-sizing: border-box;
+}
+.Gr_sidebar p{
+    color:#fff;
+    font-size:15px;
+    width:16px;
+    height:150px;
+    padding-top:4px;
+    box-sizing: border-box;
+    border-top:8px solid #0fc;
+}
+.Gr_across_con{
+    flex: 1;
     padding:12px;
     background:pink;
     margin:0 auto;
     box-sizing: border-box;
     background:rgb(0, 0, 0,.9);
-    position: absolute;
-    right: 0;
-    top: 80px;
 }
 .across_head{
     color:#fff;

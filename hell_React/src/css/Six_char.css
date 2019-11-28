@@ -1,4 +1,11 @@
-/* 容器 */
+.Gr_liu_cons{
+    background-color: rgb(240, 242, 245);
+}
+.Gr_liu_con{
+    margin:20px;
+    background:#fff;
+}
+
 .Gr_six_con{
     width:100%;
     height:100%;
@@ -45,9 +52,9 @@ top:70px;
     font-size:18px;
     line-height: 60px;
     background:#09f;
-    margin:120px auto;
+    margin:100px auto;
     border-radius: 5px;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     z-index: 99;
 }

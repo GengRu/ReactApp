@@ -214,6 +214,37 @@ var convertData = function (data) {
   }
   return res;
 };
+// function renderItem(params, api) {
+//     var coords = [
+//         [116.7,39.53],
+//         [103.73,36.03],
+//         [112.91,27.87],
+//         [120.65,28.01],
+//         [119.57,39.95]
+//     ];
+//     var points = [];
+//     for (var i = 0; i < coords.length; i++) {
+//         points.push(api.coord(coords[i]));
+//     }
+//     var color = api.visual('color');
+
+//     return {
+//         type: 'polygon',
+//         shape: {
+//             points: echarts.graphic.clipPointsByRect(points, {
+//                 x: params.coordSys.x,
+//                 y: params.coordSys.y,
+//                 width: params.coordSys.width,
+//                 height: params.coordSys.height
+//             })
+//         },
+//         style: api.style({
+//             fill: color,
+//             stroke: echarts.color.lift(color)
+//         })
+//     };
+// }
+
 var geoCoordMap = {
   '海门':[121.15,31.89],
   '鄂尔多斯':[109.781327,39.608266],
@@ -414,270 +445,237 @@ class Immortals extends React.Component {
 	}
 	render() {
 		return (
-          <div id = "Gr_world" style={{width: '140%',height: '155%',background:'rgb(0,0,0,.7)',position: "absolute",left:"-280px",}}></div>
+          <div id = "Gr_world" style={{width: '100%',height: '100%',background:'rgb(0,0,0,.7)'}}></div>
 		)
 	}
 	componentDidMount() {
 		  var myChart = Echarts.init(document.getElementById('Gr_world'));
       var option = {
-          title: {
-              // text: '全国主要城市空气质量',
-              // subtext: 'data from PM25.in',
-              // sublink: 'http://www.pm25.in',
-              left: 'center',
-              textStyle: {
-                  color: '#fff'
-              }
-          },
-          // tooltip : {
-          //     trigger: 'item'
-          // },
-          //geo
-          geo: {
-		        map: 'china',
-		        label: {
-		            emphasis: {
-		                show: false
-		            }
-		        },
-		        itemStyle: {
-		        	//未激活样式
-		            normal: {
-		                areaColor: '#323c48',
-		                borderColor: '#111'
-		            },
-		            //激活样式
-		            emphasis: {
-		                areaColor: '#2a333d'
-		            }
-		        }
-          },
-          bmap: {
-              center: [104.114129, 37.550339],
-              zoom: 5,
-              roam: true,
-              mapStyle: {
-                  styleJson: [
-                          {
-                              "featureType": "water",
-                              "elementType": "all",
-                              "stylers": {
-                                  "color": "#044161"
-                              }
-                          },
-                          {
-                              "featureType": "land",
-                              "elementType": "all",
-                              "stylers": {
-                                  "color": "#004981"
-                              }
-                          },
-                          {
-                              "featureType": "boundary",
-                              "elementType": "geometry",
-                              "stylers": {
-                                  "color": "#064f85"
-                              }
-                          },
-                          {
-                              "featureType": "railway",
-                              "elementType": "all",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "highway",
-                              "elementType": "geometry",
-                              "stylers": {
-                                  "color": "#004981"
-                              }
-                          },
-                          {
-                              "featureType": "highway",
-                              "elementType": "geometry.fill",
-                              "stylers": {
-                                  "color": "#005b96",
-                                  "lightness": 1
-                              }
-                          },
-                          {
-                              "featureType": "highway",
-                              "elementType": "labels",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "arterial",
-                              "elementType": "geometry",
-                              "stylers": {
-                                  "color": "#004981"
-                              }
-                          },
-                          {
-                              "featureType": "arterial",
-                              "elementType": "geometry.fill",
-                              "stylers": {
-                                  "color": "#00508b"
-                              }
-                          },
-                          {
-                              "featureType": "poi",
-                              "elementType": "all",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "green",
-                              "elementType": "all",
-                              "stylers": {
-                                  "color": "#056197",
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "subway",
-                              "elementType": "all",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "manmade",
-                              "elementType": "all",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "local",
-                              "elementType": "all",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "arterial",
-                              "elementType": "labels",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
-                          },
-                          {
-                              "featureType": "boundary",
-                              "elementType": "geometry.fill",
-                              "stylers": {
-                                  "color": "#029fd4"
-                              }
-                          },
-                          {
-                              "featureType": "building",
-                              "elementType": "all",
-                              "stylers": {
-                                  "color": "#1a5787"
-                              }
-                          },
-                          {
-                              "featureType": "label",
-                              "elementType": "all",
-                              "stylers": {
-                                  "visibility": "off"
-                              }
+        visualMap: {
+            min: 0,
+            max: 1500,
+            left: 'left',
+            top: 'bottom',
+            text: ['高','低'],
+            inRange: {
+                color: ['yellow','green','blue','tomato',]
+            },
+            show:true
+        },
+      geo: {
+            map: 'china',
+            roam:true,
+            // scaleLimit:{min:1,max:3},
+            itemStyle: {
+                //未激活样式
+                normal: {
+                    areaColor: '#323c48',
+                    borderColor: '#111'
+                },
+                //激活样式
+                emphasis: {
+                    areaColor: '#2a333d'
+                }
+            }
+      },
+      bmap: {
+          center: [104.114129, 37.550339],
+          mapStyle: {
+              styleJson: [
+                      {
+                          "featureType": "water",
+                          "elementType": "all",
+                          "stylers": {
+                              "color": "#044161"
                           }
-                  ]
-              }
+                      },
+                      {
+                          "featureType": "land",
+                          "elementType": "all",
+                          "stylers": {
+                              "color": "#004981"
+                          }
+                      },
+                      {
+                          "featureType": "boundary",
+                          "elementType": "geometry",
+                          "stylers": {
+                              "color": "#064f85"
+                          }
+                      },
+                      {
+                          "featureType": "railway",
+                          "elementType": "all",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "highway",
+                          "elementType": "geometry",
+                          "stylers": {
+                              "color": "#004981"
+                          }
+                      },
+                      {
+                          "featureType": "highway",
+                          "elementType": "geometry.fill",
+                          "stylers": {
+                              "color": "#005b96",
+                              "lightness": 1
+                          }
+                      },
+                      {
+                          "featureType": "highway",
+                          "elementType": "labels",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "arterial",
+                          "elementType": "geometry",
+                          "stylers": {
+                              "color": "yellow"
+                          }
+                      },
+                      {
+                          "featureType": "arterial",
+                          "elementType": "geometry.fill",
+                          "stylers": {
+                              "color": "#00508b"
+                          }
+                      },
+                      {
+                          "featureType": "poi",
+                          "elementType": "all",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "green",
+                          "elementType": "all",
+                          "stylers": {
+                              "color": "#056197",
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "subway",
+                          "elementType": "all",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "manmade",
+                          "elementType": "all",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "local",
+                          "elementType": "all",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "arterial",
+                          "elementType": "labels",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      },
+                      {
+                          "featureType": "boundary",
+                          "elementType": "geometry.fill",
+                          "stylers": {
+                              "color": "#029fd4"
+                          }
+                      },
+                      {
+                          "featureType": "building",
+                          "elementType": "all",
+                          "stylers": {
+                              "color": "#1a5787"
+                          }
+                      },
+                      {
+                          "featureType": "label",
+                          "elementType": "all",
+                          "stylers": {
+                              "visibility": "off"
+                          }
+                      }
+              ]
+          }
+      },
+      series : [
+          {
+              name: 'pm2.5',
+              type: 'scatter',
+              coordinateSystem: 'geo',
+              data: convertData(data),
+              hoverAnimation: true,
+              value: [        // 数据项值
+                116.46,     // 地理坐标，经度
+                39.92,      // 地理坐标，纬度
+                340         // 北京地区的数值
+              ],
+              symbolSize: function (val) {
+                  return val[2] / 10;
+              },
           },
-          //visualMap
-          // visualMap: {
-		      //   min: 0,//最小
-		      //   max: 300,//最大
-		      //   splitNumber: 5,//共分5层
-		      //   color: ['#ff6300','#eac736','#50a3ba'],//颜色从高到低依次渐变
-		      //   textStyle: {
-		      //       color: '#fff'
-          //   }
-          // },
-          series : [
-              {
-                  name: 'pm2.5',
-                  type: 'scatter',
-                  coordinateSystem: 'geo',
-                  data: convertData(data),
-                  hoverAnimation: true,
-                  value: [        // 数据项值
-                    116.46,     // 地理坐标，经度
-                    39.92,      // 地理坐标，纬度
-                    340         // 北京地区的数值
-                  ],
-                  symbolSize: function (val) {
-                      return val[2] / 10;
-                  },
-                  // label: {
-                  //     normal: {
-                  //         formatter: '{b}',
-                  //         position: 'right',
-                  //         show: true
-                  //     },
-                  //     emphasis: {
-                  //         show: true
-                  //     }
-                  // },
-                  // itemStyle: {
-                  //     normal: {
-                  //         color: '#ddb926'
-                  //     }
-                  // }
+          {
+              name: 'Top 5',
+              type: 'effectScatter',
+              coordinateSystem: 'geo',
+            //   coordinateSystem: 'bmpa',
+              hoverAnimation: true,
+              data: convertData(data.sort(function (a, b) {
+                  return b.value - a.value;
+              }).slice(0, 6)),
+              symbolSize: function (val) {
+                  return val[2] / 10;
               },
-              {
-                  name: 'Top 5',
-                  type: 'effectScatter',
-                  coordinateSystem: 'bmap',
-                  hoverAnimation: true,
-                  data: convertData(data.sort(function (a, b) {
-                      return b.value - a.value;
-                  }).slice(0, 6)),
-                  symbolSize: function (val) {
-                      return val[2] / 10;
-                  },
-                  showEffectOn: 'emphasis',
-                  rippleEffect: {
-                      brushType: 'stroke'
-                  },
-                 
-                  // label: {
-                  //     normal: {
-                  //         formatter: '{b}',
-                  //         position: 'right',
-                  //         show: true
-                  //     }
-                  // },
-                  // itemStyle: {
-                  //     normal: {
-                  //         color: '#f4e925',
-                  //         shadowBlur: 10,
-                  //         shadowColor: '#333'
-                  //     }
-                  // },
-                  zlevel: 1
+              showEffectOn: 'emphasis',
+              rippleEffect: {
+                  brushType: 'stroke'
               },
-              // {
-              //     type: 'custom',
-              //     coordinateSystem: 'bmap',
-              //     // renderItem: renderItem,
-              //     itemStyle: {
-              //         normal: {
-              //             opacity: 0.5
-              //         }
-              //     },
-              //     animation: false,
-              //     silent: true,
-              //     data: [0],
-              //     z: -10
-              // }
-          ]
-      };
+                zlevel: 1
+            //  label: {
+            //       normal: {
+            //           formatter: '{b}',
+            //           position: 'right',
+            //           show: true
+            //       }
+            //   },
+            //   itemStyle: {
+            //       normal: {
+            //           color: '#f4e925',
+            //           shadowBlur: 10,
+            //           shadowColor: '#333'
+            //       }
+            //   },
+          },
+          {
+              type: 'custom',
+              coordinateSystem: 'bmap',
+              itemStyle: {
+                  normal: {
+                      opacity: 0.5
+                  }
+              },
+              animation: false,
+              silent: true,
+              data: [0],
+              z: -10
+          }
+      ]
+  };
         myChart.setOption(option);
     }
 }

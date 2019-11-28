@@ -3,6 +3,7 @@ import axios from "axios";
 import Runnum from "./../components/Runnum/Dfw-runnum.js";
 import '../css/Yanwang.css';
 import Gus from './Gus.js'
+import Tb_head from "../components/head_g/head";
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -20,6 +21,7 @@ class Yanwang extends React.Component {
 	render() {
 		return (
 			<div className="Dfw-contina">
+			<Tb_head />
 				<div className="Dfw-confie">
 					<Runnum value={['首页','阎王殿审判记录']} />
 					<div className="Dfw-Dene">
