@@ -85,7 +85,7 @@ class Sheng extends React.Component {
   }
   // 切换页数
   changePage(index) {
-    console.log(index);
+    // console.log(index);
     this.setState({
       dieArr: this.state.dieList.slice(index * 8, index * 8 + 8),
     });

@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 class Yanwang extends React.Component {
 	constructor(props) {
-		super()
+		super(props)
 		this.state = {
 			str: true,
 			name: true,
@@ -38,7 +38,7 @@ class Yanwang extends React.Component {
 			})
 		}
 		var s=document.querySelector('.Dfw-confie');
-		console.log(s)
+		// console.log(s)
 		return (
 			<div className="Dfw-contina">
 			<Tb_head />
@@ -53,7 +53,7 @@ class Yanwang extends React.Component {
 	}
 	componentDidMount() {
 		axios.post("/goss").then(data => {
-			console.log(data)
+			// console.log(data)
 			var ser = data.data.data
 			this.setState({
 				ens: ser

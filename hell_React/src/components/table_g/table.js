@@ -10,13 +10,13 @@ class Table extends React.Component {
     var arr = [];
     if (this.props.dieArr) {
       for (var key in this.props.dieArr[0]) {
-        console.log(key);
+        // console.log(key);
         arr.push(key);
       }
       arr.pop();
       var FormCont = this.props.dieArr.map((i, idx) => {
         return (
-          <div key={i.id} className="Zxr_sheng_box_Form_cont">
+          <div key={i[arr[0]]+idx} className="Zxr_sheng_box_Form_cont">
             <div
               style={{
                 width: "64px",
