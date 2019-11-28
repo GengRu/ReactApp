@@ -49,8 +49,9 @@ i {
   z-index: 9;
   overflow-x: auto;
   width: 200px;
-  background: #001529;
   height: 1000px;
+  background: #001529;
+  padding-top:10px;
 }
 nav ul li {
   font-size: 16px;
@@ -60,6 +61,11 @@ nav ul li {
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+nav ul li i{
+  color:#fff;
+  font-size:20px;
+  margin-right:8px;
 }
 .Dfw-cimg{
   margin-top:0px;
@@ -87,4 +93,8 @@ nav li .p-min{
   font-size:16px;
   color: #666;
   line-height: 60px;
+}
+.Tb_span{
+  font-size:22px;
+  font-weight: bold;
 }

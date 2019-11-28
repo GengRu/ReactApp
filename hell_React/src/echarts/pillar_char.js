@@ -10,7 +10,10 @@ class Immortals extends React.Component {
 	render() {
 		return (
             <div className='Gr_pillar_con'>
-               <div id = "Gr_pillar" style={{width: 324,height: 264,}}></div>
+                <div className='Gr_pillar_bar'>
+                    <p>冥币汇率变化</p>
+                </div>
+               <div id = "Gr_pillar" style={{width: 324,height: 264, background:'rgb(0, 0, 0,.9)'}}></div>
             </div>
 		)
 	}

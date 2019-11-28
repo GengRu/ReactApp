@@ -1,8 +1,28 @@
 .Gr_four_con{
-    width:324px;
+    /* width:324px; */
+    display: flex;
+    width:380px;
     height:264px;
-    background:rgb(0, 0, 0,0.9);
     position: absolute;
     right: 0;
     top: 640px;
+}
+.Gr_four_bar{
+    width:42px;
+    margin-right:14px;
+    background:rgb(0, 0, 0,.9);
+    padding:10px 0 0 12px;
+    box-sizing: border-box;
+}
+.Gr_four_bar p{
+    color:#fff;
+    font-size:15px;
+    width:16px;
+    height:150px;
+    padding-top:4px;
+    box-sizing: border-box;
+    border-top:8px solid #0fc;
+}
+.Gr_four{
+    flex: 1;
 }

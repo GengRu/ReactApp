@@ -2,6 +2,7 @@ import React from "react";
 import * as Echarts from "echarts";
 import "../css/Six_char.css";
 import Runnum from '../components/Runnum/Dfw-runnum.js'
+import Tb_head from "../components/head_g/head";
 
 var num = 340;
 class Immortals extends React.Component {
@@ -22,27 +23,29 @@ class Immortals extends React.Component {
   }
   render() {
     return (
-        <div>
-            <div>
-            <Runnum value={['首页','六道轮回','猪刚烈的轮回']}></Runnum>
+        <div className='Gr_liu_cons'>
+          <Tb_head />
+         <div className='Gr_liu_con'>
+            <div className='Gr_liu_nav'>
+                <Runnum value={['首页','六道轮回','猪刚烈的轮回']}></Runnum>
             </div>
-        <div className="Gr_six_con">
-          <div className="Gr_img">
-            <div className="Gr_triangle"></div>
+            <div className="Gr_six_con">
+            <div className="Gr_img">
+                <div className="Gr_triangle"></div>
+                <div
+                  id="Gr_six"
+                  style={{ width: 500, height: 500, zIndex: 66 }}
+                ></div>
+            </div>
             <div
-              id="Gr_six"
-              style={{ width: 500, height: 500, zIndex: 66 }}
-            ></div>
-          </div>
-          <div
-            className="Gr_sixbtn"
-            onClick={() => {
-              this.btn();
-            }}
-          >
-            立即开始轮回
-          </div>
-        </div>
+                className="Gr_sixbtn"
+                onClick={() => {
+                  this.btn();
+                }}>
+                立即开始轮回
+            </div>
+            </div>
+         </div>
       </div>
     );
   }

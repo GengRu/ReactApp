@@ -1,6 +1,7 @@
 .Tb_home {
   width: 100%;
-  height: 100vh;
+  /* height: 800px;
+  overflow: auto; */
 }
 .Tb_home_cont_bg {
   width: 100%;
