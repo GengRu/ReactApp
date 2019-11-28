@@ -1,6 +1,8 @@
 .Dfw-Mde{
     display: flex;
     margin-left:6px;
+    color:#333;
+    padding-top:6px;
 }
 .Dfw-conner{
     line-height: 40px;

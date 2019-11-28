@@ -2,7 +2,8 @@ import React from 'React';
 import axios from "axios";
 import Runnum from "./../components/Runnum/Dfw-runnum.js";
 import '../css/Yanwang.css';
-import Gus from './Gus.js';
+import Gus from './Gus.js'
+import Tb_head from "../components/head_g/head";
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -11,7 +12,7 @@ import {
 } from "react-router-dom";
 class Yanwang extends React.Component {
 	constructor(props) {
-		super()
+		super(props)
 		this.state = {
 			str: true,
 			name: true,
@@ -39,6 +40,7 @@ class Yanwang extends React.Component {
 		var s=document.querySelector('.Dfw-confie');
 		return (
 			<div className="Dfw-contina">
+			<Tb_head />
 				<div className="Dfw-confie">
 					<Runnum value={['首页', '阎王殿审判记录']} />
 					<div className="Dfw-Dene" >

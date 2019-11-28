@@ -6,8 +6,6 @@
 	background-color: rgba(240, 242, 245, 1);
 	padding: 20px;
 }
-
-
 .Zxr_sheng_box{
 	width: 100%;
 	height: 100%;
@@ -68,6 +66,7 @@
 	width: 128px;
 	height: 35px;
 	border-color: #ccc;
+	margin-left:6px;
 }
 
 

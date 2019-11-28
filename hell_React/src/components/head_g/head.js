@@ -24,6 +24,7 @@ class Tb_head extends React.Component {
     return (
       <div className="Tb_home_header">
         <div className="Tb_home_headerCont">
+          <i className='iconfont icon-bell' style={{fontSize:'24px',marginRight:'6px',color:'#333'}}></i>
           <div className="head_img">
             <img src={this.state.login.imgUrl} alt="" />
           </div>

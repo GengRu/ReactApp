@@ -20,7 +20,7 @@ class Login extends React.Component {
 function Login_Title() {
   return (
     <div className="Zxr_Login_Title">
-      <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/登录页/u43.png?token=8fdef291d2f602579601f68aaac408d40186b825e741733978f05cad60b79f02" />
+     <i className='iconfont icon-kulou' style={{fontSize:'26px',paddingRight:'10px'}}></i>
       地府管理系统
     </div>
   );

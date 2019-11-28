@@ -115,8 +115,7 @@ class Shuju extends React.Component {
           key={idx}
           onClick={() => {
             this.Btn(idx);
-          }}
-        >
+          }}>
           <div className="Zxr_shuju_cont_rightBox_lunbo_list_title">
             {i[0]}
             <div className="Zxr_shuju_border"></div>
@@ -139,6 +138,7 @@ class Shuju extends React.Component {
         <Four_char />
         <div className="Zxr_shuju_top">
           <div className="Zxr_shuju_top_left" onClick={this.Back.bind(this)}>
+            <i className='iconfont icon-icon-shang' style={{color:'#fff',marginRight:'4px',fontSize:'18px',color: 'rgb(228, 228, 228)'}}></i>
             地府大数据可视化平台
           </div>
           <div className="Zxr_shuju_top_right">
@@ -159,7 +159,8 @@ class Shuju extends React.Component {
                 onClick={this.Top.bind(this)}
                 style={{ textAlign: "center" }}
               >
-                <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/地府大数据/u332.png?token=abe53abc48770e360880103033ed0d81678df36db7db8094979b372102a06013" />
+              <i className='iconfont icon-rate-up' style={{fontSize:'30px'}}></i>
+                {/* <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/地府大数据/u332.png?token=abe53abc48770e360880103033ed0d81678df36db7db8094979b372102a06013" /> */}
               </div>
 
               <div className="Zxr_shuju_cont_rightBox_lunbo1">{Lunbo}</div>
@@ -168,10 +169,11 @@ class Shuju extends React.Component {
                 onClick={this.Foot.bind(this)}
                 style={{ textAlign: "center" }}
               >
-                <img
+              <i className='iconfont icon-sort_desc' style={{fontSize:'30px'}}></i>
+                {/* <img
                   style={{ marginTop: "10px" }}
                   src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/地府大数据/u333.png?token=6923f2359da1174f6820be7e72c7cde0259faaae63c2e35f648ae885f53337db"
-                />
+                /> */}
               </div>
             </div>
 
