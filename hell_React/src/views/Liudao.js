@@ -9,6 +9,10 @@ class Immortals extends React.Component {
     super(props);
   }
   btn() {
+    if (JSON.parse(sessionStorage.login).data[0].id == 10000) {
+      alert("没有权限")
+      return
+    }
     var obtn = document.getElementById("Gr_six");
     obtn.style.transition = "1s";
     // console.log(1);

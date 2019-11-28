@@ -8,11 +8,13 @@ class Tb_head extends React.Component {
     };
   }
   componentWillMount() {
-    var login = JSON.parse(window.sessionStorage.login).data[0];
-    // console.log(login);
-    this.setState({
-      login: login
-    });
+    if (window.sessionStorage.login) {
+      var login = JSON.parse(window.sessionStorage.login).data[0];
+      // console.log(login);
+      this.setState({
+        login: login
+      });
+    }
   }
   back() {
     sessionStorage.login = "";
