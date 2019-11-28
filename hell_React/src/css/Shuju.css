@@ -1,0 +1,142 @@
+.Zxr_shuju{
+	background-color: #ccc;
+	width: 100%;
+	height: auto;
+}
+
+.Zxr_shuju_top{
+	padding: 25px 0;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.Zxr_shuju_top_left{
+	margin-left: 20px;
+	float: left;
+	color: rgb(228, 228, 228);
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	position: relative;
+	z-index: 99;
+}
+
+.Zxr_shuju_top_right{
+	float: right;
+	color: rgba(255, 255, 255, 0.686);
+	padding-right: 20px;
+	position: relative;
+	z-index: 99;
+}
+
+.Zxr_shuju_top_right span{
+	margin: 0 10px;
+}
+
+.Zxr_shuju_cont{
+	min-height: 900px;
+	position: relative;
+}
+
+.Zxr_shuju_cont_rightBox{
+	position: absolute;
+	top: 10px;left: 10px;
+	width: 210px;
+}
+
+.Zxr_shuju_cont_rightBox_topBox{
+	font-family: 微軟正黑體;
+	font-weight: 400;
+	font-style: normal;
+	color: rgb(0, 255, 204);
+	background-color: rgba(0,0,0,.9);
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+.Zxr_shuju_cont_rightBox_topBox_text1{
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+.Zxr_shuju_cont_rightBox_topBox_text2{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.Zxr_shuju_cont_rightBox_lunbo{
+	padding: 10px;
+	background-color: rgba(0,0,0,.9);
+	color: rgba(0, 255, 204, 0.82);
+	margin-bottom: 30px;
+}
+
+.Zxr_shuju_cont_rightBox_lunbo_list{
+	height: auto;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.Zxr_shuju_cont_rightBox_lunbo_list_title{
+	text-align: center;
+	padding: 21.5px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	perspective: 350px;
+}
+
+.Zxr_shuju_border{
+	border: 2px solid #00FFCC;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	width: 166px;
+	height: 45px;
+	transform: rotateX(46deg);
+}
+
+.Zxr_shuju_cont_rightBox_lunbo_list_cont{
+	border: 2px solid #00FFCC;
+	margin: -9px 10px 10px;
+	color: #999999;
+	display: none;
+}
+
+.Zxr_shuju_cont_rightBox_lunbo_list_cont div{
+	padding: 10px;
+}
+
+.Zxr_shuju_cont_rightBox_footBox{
+	width: 300px;
+	height: 190px;
+	background-color: rgba(0,0,0,.9);
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.Zxr_shuju_cont_rightBox_footBox_title{
+	padding: 20px 0;
+	font-size: 13px;
+}
+
+.Zxr_shuju_cont_rightBox_footBox_left{
+	float: left;
+	width:50%;
+	height:90px;
+	padding-top: 30px;
+	font-size: 13px;
+	box-sizing: border-box;
+	border-right: 1px solid #ccc;
+	color: #00FFCC;
+}
+
+.Zxr_shuju_cont_rightBox_footBox_right{
+	float: right;
+	width:50%;
+	height:90px;
+	padding-top: 30px;
+	font-size: 13px;
+	box-sizing: border-box;
+	color: #FF9900;
+}

@@ -8,6 +8,10 @@ var indexRouter = require('./routes/index');
 var loginIn = require('./routes/loginIn');
 var home = require('./routes/home');
 var sheng = require('./routes/sheng');
+var gouhun = require('./routes/gouhun');
+var mingbi = require('./routes/mingbi');
+var rizhi = require('./routes/rizhi');
+var goss = require('./routes/goss');
 
 var app = express();
 
@@ -46,6 +50,10 @@ app.use('/', indexRouter);
 app.use('/loginIn', loginIn);
 app.use('/home', home);
 app.use('/sheng', sheng);
+app.use('/gouhun', gouhun);
+app.use('/mingbi', mingbi);
+app.use('/rizhi', rizhi);
+app.use('/goss', goss);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

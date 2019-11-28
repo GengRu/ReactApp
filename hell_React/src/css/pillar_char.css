@@ -3,4 +3,7 @@
     height:264px;
     margin:0 auto;
     background:black;
+    position: absolute;
+    right: 0;
+    top: 360px;
 }

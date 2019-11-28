@@ -1,5 +1,6 @@
 import React from "react";
 import "./top.css";
+import { Link } from "react-router-dom";
 class Tb_home_top extends React.Component {
   render() {
     // console.log(this.props);
@@ -10,8 +11,10 @@ class Tb_home_top extends React.Component {
           key={item.title}
           style={{ background: item.bgColor }}
         >
-          <p>{item.title}</p>
-          <p>{this.props.count[index]}</p>
+          <Link to={item.path}>
+            <p>{item.title}</p>
+            <p>{this.props.count[index]}</p>
+          </Link>
         </div>
       );
     });

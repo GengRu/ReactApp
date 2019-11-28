@@ -1,0 +1,61 @@
+.Zxr_sheng_box_Form_foot_right{
+	float: right;
+}
+
+.Zxr_sheng_box_Form_foot_right span{
+	float: left;
+	line-height: 50px;
+	margin-right: 5px;
+}
+
+.Zxr_sheng_box_Form_foot_right_ye{
+	display: inline-block;
+	overflow: hidden;
+	padding: 12.5px 0;
+}
+
+.Zxr_sheng_box_Form_foot_right_ye div{
+	float: left;
+	width: 35px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: #CCC;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	margin: 0 3px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_Form_foot_right_to{
+	display: inline-block;
+	float: right;
+	padding: 12.5px;
+	overflow: hidden;
+}
+
+.Zxr_sheng_box_Form_foot_right_to_input{
+	display: inline-block;
+	width: 35px;
+	height: 25px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+}
+
+.Zxr_sheng_box_Form_foot_right_to_input input{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.Zxr_sheng_box_Form_foot_right_to span{
+	float: none;
+	display: inline-block;
+	line-height: 25px;
+	margin-right: 0;
+	float: left;
+}

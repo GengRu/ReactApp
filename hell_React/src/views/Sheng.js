@@ -1,155 +1,155 @@
 import React from "react";
-
 import axios from "axios";
 import "../css/Sheng.css";
 import Tb_head from "../components/head_g/head";
-
-
+import ShengTab from "../components/tab_g/tab";
+import Table from "./../components/table_g/table";
+import Page from "./../components/page_g/page";
 
 class Sheng extends React.Component {
   constructor() {
     super();
     this.state = {
-      index: 0,
-      dieList: [],
+      dieList: "",
       dieArr: [],
-      value1: "",
-      value2: "",
-      i: 0
+      value1: "", //类别
+      value2: "", //死亡方式
+      i: 0,
+      arr: ["阳寿未尽", "孤魂野鬼", "转世投胎", "已删除"],
+      type1: "阳寿未尽",
+      leibie: [], //类别
+      dieType: [], //死亡方式
+      tableArr: ["ID", "姓名", "寿命", "类别", "死亡方式", "操作"] // 表格标题
     };
     this.select1 = this.select1.bind(this);
     this.select2 = this.select2.bind(this);
   }
 
-  Dian(i) {
-    this.setState({
-      index: i
-    });
-  }
-
-  componentDidMount() {
-    axios.get("/sheng").then(data => {
-      // console.log(data.data.data);
-      this.setState({
-        dieList: data.data.data
-      });
-      this.setState({
-        dieArr: this.state.dieList.slice(
-          this.state.i * 10,
-          this.state.i * 10 + 10
-        )
-      });
-      // console.log(this.state.dieArr);
-    });
-  }
-  // 类别
-  select1(event) {
+  componentWillMount() {
     axios
-      .get("/sheng/getType", {
+      .get("/sheng", {
         params: {
-          type: event.target.value
+          type: this.state.type1
         }
       })
       .then(data => {
-        // console.log(data.data.data);
+        this.getData(data.data.data);
+      });
+  }
+  // 类别
+  select1(event) {
+    if (event.target.value == "请选择") return;
+    axios
+      .get("/sheng/getType", {
+        params: {
+          type: event.target.value,
+          tab: this.state.type1
+        }
+      })
+      .then(data => {
+        this.refs.sel2.value = "请选择";
         this.setState({
           dieList: data.data.data
         });
         this.setState({
           dieArr: this.state.dieList.slice(
-            this.state.i * 10,
-            this.state.i * 10 + 10
+            this.state.i * 8,
+            this.state.i * 8 + 8
           )
         });
       });
   }
   // 死亡范式
   select2(event) {
+    if (event.target.value == "请选择") return;
     axios
       .get("/sheng/getDieType", {
         params: {
-          type: event.target.value
+          type: event.target.value,
+          tab: this.state.type1
         }
       })
       .then(data => {
         // console.log(data.data.data);
+        this.refs.sel1.value = "请选择";
         this.setState({
           dieList: data.data.data
         });
         this.setState({
           dieArr: this.state.dieList.slice(
-            this.state.i * 10,
-            this.state.i * 10 + 10
+            this.state.i * 8,
+            this.state.i * 8 + 8
           )
         });
       });
   }
   // 切换页数
   changePage(index) {
+    console.log(index);
     this.setState({
-      dieArr: this.state.dieList.slice(index * 10, index * 10 + 10)
-    });
-    this.setState({
-      i: index
+      dieArr: this.state.dieList.slice(index * 8, index * 8 + 8),
     });
   }
-  render() {
-    var arr = ["阳寿未尽", "孤魂野鬼", "转世投胎", "已删除"];
-    var Cont = arr.map((i, $idx) => {
-      return (
-        <div
-          onClick={() => {
-            this.Dian($idx);
-          }}
-          className={this.state.index == $idx ? "Zxr_sheng_active" : ""}
-          key={$idx}
-        >
-          {i}
-        </div>
-      );
+
+  // 请求tab
+  changeTab(item) {
+    this.setState({
+      type1: item
     });
-    // 页数
-    var page = Math.ceil(this.state.dieList.length / 9);
-    var a = [];
-    for (let i = 1; i <= page; i++) {
-      a.push(i);
+    axios
+      .get("/sheng/si", {
+        params: {
+          type: item
+        }
+      })
+      .then(data => {
+        this.getData(data.data.data);
+      });
+  }
+
+  getData(data) {
+    this.refs.sel1.value = "请选择";
+    this.refs.sel2.value = "请选择";
+    var leibieArr = [];
+    var dieTypeArr = [];
+    for (var i = 0; i < data.length; i++) {
+      if (leibieArr.indexOf(data[i].type) == -1) {
+        leibieArr.push(data[i].type);
+      }
+      if (dieTypeArr.indexOf(data[i].dieType) == -1) {
+        dieTypeArr.push(data[i].dieType);
+      }
     }
-    // 页数
-    var b = a.map((item, index) => {
+    this.setState({
+      leibie: leibieArr,
+      dieType: dieTypeArr,
+      dieList: data,
+      dieArr: data.slice(
+        this.state.i * 8,
+        this.state.i * 8 + 8
+      )
+    });
+  }
+
+  render() {
+    // 类别
+    var leibieList = this.state.leibie.map(item => {
       return (
-        <div
-          key={index}
-          onClick={() => {
-            this.changePage(index);
-          }}
-          style={{ color: this.state.i == index ? "red" : "black" }}
-        >
+        <option key={item} value={item}>
           {item}
-        </div>
+        </option>
       );
     });
 
-    var FormCont = this.state.dieArr.map((i, idx) => {
-      // console.log(i.ID);
+    // 死亡方式
+    var dieTypeList = this.state.dieType.map(item => {
       return (
-        <div key={i.id} className="Zxr_sheng_box_Form_cont">
-          <div style={{ width: "64px", borderRight: "1px solid #ccc" }}>
-            <div className="Zxr_sheng_box_Form_cont_img">
-              {/* <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/生死簿-批量操作验证/u689.png?token=d776532ef6b3fd7da063bcf7c8578aa006a2a6133ada9911f553cfb6d2b27f75" /> */}
-            </div>
-          </div>
-          <div className="Zxr_sheng_box_Form_cont_all">{i.id}</div>
-          <div className="Zxr_sheng_box_Form_cont_all">{i.name}</div>
-          <div className="Zxr_sheng_box_Form_cont_all">{i.life}</div>
-          <div className="Zxr_sheng_box_Form_cont_all">{i.type}</div>
-          <div className="Zxr_sheng_box_Form_cont_all">{i.dieType}</div>
-          <div className="Zxr_sheng_box_Form_cont_all">
-            <span className="Zxr_sheng_box_Form_cont_btn">编辑</span>
-            <span className="Zxr_sheng_box_Form_cont_btn">删除</span>
-          </div>
-        </div>
+        <option key={item} value={item}>
+          {item}
+        </option>
       );
     });
+    
 
     return (
       <div className="shengsibu">
@@ -158,11 +158,16 @@ class Sheng extends React.Component {
         <div className="Zxr_sheng">
           <div className="Zxr_sheng_box">
             <div className="Zxr_sheng_box_title">
-              <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/生死簿-已删除/u532.png?token=510777c4f456ac388824606296c3229252edefd4f4d0ed072fb95eb9966d3ec1" />
+              {/* <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/生死簿-已删除/u532.png?token=510777c4f456ac388824606296c3229252edefd4f4d0ed072fb95eb9966d3ec1" /> */}
               生死簿
             </div>
 
-            <div className="Zxr_sheng_box_nav">{Cont}</div>
+            <div className="Zxr_sheng_box_nav">
+              <ShengTab
+                arr={this.state.arr}
+                getTab={this.changeTab.bind(this)}
+              ></ShengTab>
+            </div>
 
             <div className="Zxr_sheng_box_inputBox">
               <div className="Zxr_sheng_box_inputBox_search">
@@ -189,10 +194,7 @@ class Sheng extends React.Component {
                   onChange={this.select1}
                 >
                   <option>请选择</option>
-                  <option value="猫科">猫科</option>
-                  <option value="犬属">犬属</option>
-                  <option value="猴属">猴属</option>
-                  <option value="鼠类">鼠类</option>
+                  {leibieList}
                 </select>
               </div>
 
@@ -203,15 +205,12 @@ class Sheng extends React.Component {
                   name="AreaId"
                   size="1"
                   className="sel"
+                  ref="sel2"
                   defaultValue={this.state.value2}
                   onChange={this.select2}
                 >
                   <option>请选择</option>
-                  <option value="善终">善终</option>
-                  <option value="病死">病死</option>
-                  <option value="夭折">夭折</option>
-                  <option value="仇杀">仇杀</option>
-                  <option value="入魔">入魔</option>
+                  {dieTypeList}
                 </select>
               </div>
 
@@ -219,42 +218,20 @@ class Sheng extends React.Component {
             </div>
 
             <div className="Zxr_sheng_box_Form">
-              <div className="Zxr_sheng_box_Form_title">
-                <div
-                  style={{ width: "64px", borderRight: "1px solid #ccc" }}
-                ></div>
-                <div className="Zxr_sheng_box_Form_title_all">ID</div>
-                <div className="Zxr_sheng_box_Form_title_all">姓名</div>
-                <div className="Zxr_sheng_box_Form_title_all">寿命</div>
-                <div className="Zxr_sheng_box_Form_title_all">类别</div>
-                <div className="Zxr_sheng_box_Form_title_all">死亡方式</div>
-                <div className="Zxr_sheng_box_Form_title_all">操作</div>
-              </div>
-
-              {FormCont}
+              <Table
+                dieArr={this.state.dieArr}
+                tableArr={this.state.tableArr}
+              ></Table>
 
               <div className="Zxr_sheng_box_Form_foot">
                 <div className="Zxr_sheng_box_Form_foot_left">
                   <div className="Zxr_sheng_box_Form_foot_left_img">
                     {/* <img src="http://cloud.axureshop.com/gsc/1IZGNL/52/e4/77/52e4779c0d8d4a0c9ac6c2283464471d/images/生死簿-批量操作验证/u689.png?token=d776532ef6b3fd7da063bcf7c8578aa006a2a6133ada9911f553cfb6d2b27f75" /> */}
                   </div>
-                  <span>已选9人，选择全部{this.state.dieList.length}人</span>
+                  <span>已选0人，选择全部{this.state.dieList.length}人</span>
                 </div>
 
-                <div className="Zxr_sheng_box_Form_foot_right">
-                  <span>共{this.state.dieList.length}条数据，每页10条</span>
-                  <div className="Zxr_sheng_box_Form_foot_right_ye">{b}</div>
-                  <div className="Zxr_sheng_box_Form_foot_right_to">
-                    <span>跳至</span>
-                    <div className="Zxr_sheng_box_Form_foot_right_to_input">
-                      <input
-                        type="text"
-                        style={{ outline: "none", border: "none" }}
-                      />
-                    </div>
-                    <span>页</span>
-                  </div>
-                </div>
+                <Page dieList={this.state.dieList} changePage={this.changePage.bind(this)}></Page>
               </div>
             </div>
           </div>

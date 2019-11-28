@@ -1,0 +1,44 @@
+.Zxr_sheng_box_Form_cont{
+	width: 100%;
+	height: 53px;
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	font-size: 13px;
+}
+
+.Zxr_sheng_box_Form_cont_all{
+	float: left;
+	height: 53px;
+	line-height: 53px;
+	text-align: center;
+	flex: 1;
+	border-right: 1px solid #ccc;
+}
+
+.Zxr_sheng_box_Form_cont div:nth-last-child(1){
+	border-right: none;
+}
+
+.Zxr_sheng_box_Form_cont_btn{
+	display: inline-block;
+	color: #0099FF;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+.Zxr_sheng_box_Form_cont_img{
+	width: 24px;
+	height: 24px;
+	background-color: #0099FF;
+	border-radius: 50%;
+	position: relative;
+	bottom: -15px;
+	left: 20px;
+}
+
+.Zxr_sheng_box_Form_cont_img img{
+	width: 16px;
+	height: 10px;
+	position: absolute;
+	top: 9px;left: 5px;
+}

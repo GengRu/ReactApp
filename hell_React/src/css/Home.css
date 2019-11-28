@@ -4,7 +4,7 @@
 }
 .Tb_home_cont_bg {
   width: 100%;
-  background-color: #ccc;
+  background-color: rgba(240, 242, 245, 1);
   padding: 20px;
   box-sizing: border-box;
 }
@@ -31,7 +31,7 @@
 }
 .Tb_home_bottom_contL {
   margin-right: 10px;
-  width: 66%;
+  width: 68%;
 }
 .Tb_home_bottom_contR {
   width: 40%;
@@ -53,17 +53,27 @@
   line-height: 30px;
   color: #333;
 }
-.todayHYfirst {
+.todayHuiyi .todayHYfirst {
   padding: 0 50px 0 10px;
 }
 .todayImg {
   margin-top: 10px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 .todayImg img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin: 0 5px;
+}
+.todayHuiyi2 {
+  font-size: 14px;
+  line-height: 30px;
+  color: #111;
+}
+.todayHuiyi2 .todayHYfirst {
+  width: 100px;
+  display: inline-block;
 }

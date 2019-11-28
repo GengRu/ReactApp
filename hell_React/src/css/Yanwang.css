@@ -17,7 +17,7 @@
     font-size: 14px;
     color: #ccc;
 }
-.Dfw-Dene:hover .Dfw-list{
+.Dfw-list:hover{
     color: cornflowerblue;
 }
 .Dfw-zimg{
@@ -26,4 +26,7 @@
     transform: rotate(180deg);
     margin:0 4px;
     margin-top: 16px;
+}
+.Dfw-nod{
+    margin-bottom:12px;
 }

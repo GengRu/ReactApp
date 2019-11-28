@@ -5,15 +5,17 @@ import Tb_head from "../components/head_g/head";
 import Tb_home_top from "../components/home/top/top";
 import Tb_cont_title from "../components/home/cont_title/cont_title";
 import Tb_common_nav from "../components/home/common_nav/common_nav";
+import Line_char from "../echarts/Line_char";
+import Pie_char from "../echarts/Pie_char";
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
       data: [
-        { bgColor: "red", title: "地府人数" },
-        { bgColor: "cyan", title: "今日入境" },
-        { bgColor: "#05f", title: "今日处境" },
-        { bgColor: "#f0f", title: "管理员" }
+        { bgColor: "#00de8c", title: "地府人数", path: "/shuju" },
+        { bgColor: "#0b81f4", title: "今日入境", path: "/home" },
+        { bgColor: "#003447", title: "今日处境", path: "/home" },
+        { bgColor: "#ff5e1a", title: "管理员", path: "/home" }
       ],
       count: [],
       common_nav: [
@@ -69,7 +71,8 @@ class Home extends React.Component {
     };
   }
   //请求首页标题数据
-  componentDidMount() {
+  componentWillMount() {
+    console.log(this.props);
     var arr = [];
     axios.get("/home").then(data => {
       var json = data.data.data[0];
@@ -142,13 +145,13 @@ class Home extends React.Component {
                     />
                   </div>
                   <div>
-                    <div className="todayHuiyi">
-                      <span className="todayHYfirst">时间：</span>
-                      <span>3029年2月29日</span>
+                    <div className="todayHuiyi2">
+                      <span className="todayHYfirst">PM 6:00</span>
+                      <span>职工聚餐</span>
                     </div>
-                    <div className="todayHuiyi">
-                      <span className="todayHYfirst">地点：</span>
-                      <span>会议室2938</span>
+                    <div className="todayHuiyi2">
+                      <span className="todayHYfirst">PM 11:30</span>
+                      <span>判官搞基培训</span>
                     </div>
                   </div>
                 </div>
@@ -156,9 +159,11 @@ class Home extends React.Component {
               <div className="Tb_home_bottom_cont">
                 <div className="Tb_home_bottom_contL">
                   <Tb_cont_title title="地府出入境人数" />
+                  <Line_char></Line_char>
                 </div>
                 <div className="Tb_home_bottom_contR">
                   <Tb_cont_title title="各层地狱人数" />
+                  <Pie_char></Pie_char>
                 </div>
               </div>
             </div>

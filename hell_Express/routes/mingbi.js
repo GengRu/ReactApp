@@ -1,16 +1,14 @@
-var express = require("express");
+var express = require('express');
 var mysql = require("./sql");
 var router = express.Router();
 
-// 登录
-router.post("/", function(req, res, next) {
-  var json = req.data;
-  // 判断登陆
+/* GET home page. */
+router.get("/", function(req, res, next) {
+  const data = req.data;
   mysql.sql({
-    sql: `select * from two_user where id='${json.id}' and pass='${json.password}'`,
+    sql: `select * from two_mingbi where type='${data.type}'`,
     data(data) {
       if (data.length) {
-        // delete data.password
         res.send({
           ok: 0,
           data: data

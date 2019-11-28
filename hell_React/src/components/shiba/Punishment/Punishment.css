@@ -1,0 +1,61 @@
+.Zjt_Punishment{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.Zjt_Punishment_top{
+    padding: 10px;
+}
+.Zjt_top{
+    overflow: hidden;
+    line-height: 30px;
+}
+.Punishment{
+    float: left;
+    font-size: 13px;
+    color: #333333;
+}
+.state{
+    float: right;
+    color: #00CC99;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.Zjt_bt{
+    overflow: hidden;
+    line-height: 30px;
+    font-size: 13px;
+}
+.person{
+    color: #999999;
+    float: left;
+}
+.times{
+    float: right;
+    color: #999999;
+}
+.Zjt_img{
+    overflow: hidden;
+    height: 152px;
+}
+.Zjt_img img{
+    width: 100%;   
+}
+.Zjt_list{
+    padding: 20px 80px;
+}
+.Zjt_list_s{
+    overflow: hidden;
+    text-align: center;
+    font-size: 13px;
+    color: #0099FF;
+}
+.Zjt_l{
+    float: left;
+    cursor:pointer;
+}
+.Zjt_r{
+    float: right;
+    cursor:pointer;
+}
+
